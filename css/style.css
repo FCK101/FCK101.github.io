@@ -8641,6 +8641,7 @@ html.is-animating .swup-progress-icon {
 
 .home-sidebar-container .sidebar-content {
     padding: 20px;
+    margin-top: 30px;
     border-radius: 18px;
     box-sizing: border-box;
     background: var(--background-color);
