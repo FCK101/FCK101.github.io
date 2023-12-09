@@ -423,7 +423,18 @@
 
                         <div class="right">
                             <div class="desktop">
-
+                                <ul class="navbar-list">
+                                    <li class="navbar-item"><a class="active" href="/"><i class="fa-regular fa-house"></i> 首页</a></li>
+                                    <li class="navbar-item"><a href="./public/archives/index.html"><i class="fa-regular fa-archive"></i> 归档</a></li>
+                                    <li class="navbar-item"><a target="_blank" rel="noopener" href="/public/404.html"><i class="fa-regular fa-book"></i> 文章</a></li>
+                                    <li class="navbar-item"><a class="has-dropdown" href="#" onclick="return!1"><i class="fa-regular fa-link"></i> 链接&nbsp;<i class="fa-solid fa-chevron-down"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a target="_blank" rel="noopener" href="/public/404.html">关于</a></li>
+                                            <li><a target="_blank" rel="noopener" href="/public/404.html">GithubT</a></li>
+                                            <li><a href="/public/404.html">友情链接</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="mobile">
                                 <div class="icon-item navbar-bar" data-navbar-initialized="1">
@@ -440,17 +451,42 @@
                         <ul class="drawer-navbar-list flex flex-col justify-start items-center">
 
 
-                            <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                            <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center" data-navbar-initialized="1">
                                 <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group active" href="/">
-
-
                                     <i class="fa-regular fa-house"></i> 首页
-
                                 </a>
                             </li>
+
+                            <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center" data-navbar-initialized="1">
+                                <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group" href="/archives">
+                                    <i class="fa-regular fa-archive"></i> 归档
+                                </a>
+                            </li>
+
+                            <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center" data-navbar-initialized="1">
+                                <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group" href="/public/404.html">
+                                    <i class="fa-regular fa-archive"></i> 文章
+                                </a>
+                            </li>
+
                             <!-- Submenu -->
+                            <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center" data-navbar-initialized="1">
+                                <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group has-dropdown" href="#" onclick="return!1">
+                                    <i class="fa-regular fa-link"></i> 链接&nbsp;<i class="group-hover:rotate-180 transition-transform fa-solid fa-chevron-down"></i>
+                                </a>
+                            </li>
 
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl" data-navbar-initialized="1">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="/public/404.html">Github</a>
+                            </li>
 
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl" data-navbar-initialized="1">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="/public/404.html">关于</a>
+                            </li>
+
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl" data-navbar-initialized="1">
+                                <a class="py-0.5" target="_blank" rel="noopener" href="/public/404.html">友情链接</a>
+                            </li>
 
                         </ul>
                     </div>
