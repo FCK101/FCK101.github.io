@@ -21,7 +21,57 @@
   <entry>
     <title>前端与HTML | 青训营</title>
     <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="写好JS的原则一：各司其责"><a href="#写好JS的原则一：各司其责" class="headerlink" title="写好JS的原则一：各司其责"></a>写好JS的原则一：各司其责</h1><h2 id="让HTML、CSS和JavaScript职能分离"><a href="#让HTML、CSS和JavaScript职能分离" class="headerlink" title="让HTML、CSS和JavaScript职能分离"></a>让HTML、CSS和JavaScript职能分离</h2><h3 id="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"><a href="#例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式" class="headerlink" title="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"></a><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3><p><strong>版本一：</strong></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">target</span>.<span class="property">innerHTML</span> === <span class="string">&#x27;🌞&#x27;</span>) &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌙&#x27;</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌞&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p><strong>版本二：</strong></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span>(body.<span class="property">className</span> !== <span class="string">&#x27;night&#x27;</span>;) &#123;</span><br><span class="line">       body.<span class="property">className</span> = <span class="string">&#x27;night&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      body.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></div>
+<p><strong>版本三：</strong></p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;modeCheckBox&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;modeBtn&quot;</span> <span class="attr">for</span>=<span class="string">&quot;modeCheckBox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>深夜食堂<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    ........</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#modeCheckBox</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#modeCheckBox</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p><strong>代码对比：</strong><br>版本二比版本一的代码更加整洁，版本一通过JS直接操作元素的style，而版本二是操作了classNam，且在开发中我们通常使用className来定义元素的状态。版本一中使用JS做了CSS该做的事情，没有做到HTML、CSS、JS的各司其责。版本二做到了结构表现行为分离，但是在纯样式改变的情况下只用CSS就可以实现，因此版本三是最佳的。</p>
+</blockquote>
+<h3 id="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"><a href="#总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。" class="headerlink" title="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"></a>总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</h3><h1 id="写好JS的原则二：组件封装"><a href="#写好JS的原则二：组件封装" class="headerlink" title="写好JS的原则二：组件封装"></a>写好JS的原则二：组件封装</h1><h2 id="好的UI组件具备正确性、扩展性、复用性"><a href="#好的UI组件具备正确性、扩展性、复用性" class="headerlink" title="好的UI组件具备正确性、扩展性、复用性"></a>好的UI组件具备正确性、扩展性、复用性</h2><p><strong>- 组件封装</strong>：组件是指Web页面上抽出来一个个包含模板（HTML）、功能（JS）、和样式（CSS）的单元。好用的组件具备封装性、正确性、扩展性、复用性。</p>
+<p><strong>- 组件设计的原则</strong>：封装性、正确性、扩展性、复用性。</p>
+<p><strong>- 实现组件的步骤</strong>：结构设计、展现效果、行为设计</p>
+<p><strong>- 三次重构：</strong></p>
+<ul>
+<li>插件化</li>
+<li>模板化</li>
+<li>抽象化（组件框架）</li>
+</ul>
+<h1 id="写好JS的原则三：过程抽象"><a href="#写好JS的原则三：过程抽象" class="headerlink" title="写好JS的原则三：过程抽象"></a>写好JS的原则三：过程抽象</h1><h2 id="应用函数式编程思想"><a href="#应用函数式编程思想" class="headerlink" title="应用函数式编程思想"></a>应用函数式编程思想</h2><ul>
+<li>用来处理局部细节控制的一些方法</li>
+<li>函数式编程思想的基础应用</li>
+</ul>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p><strong>- Once</strong>： 为了能够让“只执行一次”的需求覆盖不同的事件处理，我们可以将这个需求剥离出来。这个过程就称为<strong>过程抽象</strong>。</p>
+<p><strong>- HOF</strong>：</p>
+<ul>
+<li>以函数作为参数</li>
+<li>以函数作为返回值</li>
+<li>常用于作为函数修饰器</li>
+</ul>
+<p><strong>- 常用高阶函数</strong>：</p>
+<ul>
+<li>HOF（Once、Throttle、Debounce、Consumer&#x2F;2、Iterative）</li>
+</ul>
+<p><strong>- 编程范式</strong>：</p>
+<ul>
+<li>过程抽象&#x2F;HOF&#x2F;装饰器</li>
+<li>命令式&#x2F;声明式</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="三个写JS代码的原则"><a href="#三个写JS代码的原则" class="headerlink" title="三个写JS代码的原则"></a>三个写JS代码的原则</h2><p><strong>一：各司其责，HTML、CSS。JS分别负责它们各自的任务，即结构、表现与行为。</strong></p>
+<p><strong>二：组件封装，组件封装的原则即考虑其复用性、可扩展性、正确性。对组件抽象，做插件化、模板化，从而实现组件框架。</strong></p>
+<p><strong>三：过程抽象，针对局部细节的实现与行为可以使用过程抽象，其是函数式编程的一个基本应用，其具有命令式和声明式两种不同的编程范式，声明式比命令式更具有可扩展性，在日常开发中我们可以更多的去考虑使用声明式来编写代码。</strong></p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
   </entry>
   <entry>
     <title>如何写好Js | 青训营</title>
@@ -104,10 +154,10 @@
 <h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>在HTML的开发和编写中的语义化是必不可少的，本节课程向我们讲述了多个帮助我们达到语义化的标签，如<code>&lt;blockquote&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;main&gt;</code>等的引用和划分元素标签，相较于直接使用常见标签，语义化的开发提升了我们的代码可读性和可维护性。</p>
 ]]></content>
       <categories>
-        <category>前端编程</category>
+        <category>前端开发</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
@@ -151,6 +201,76 @@
       </categories>
       <tags>
         <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web标准与前端开发 | 青训营</title>
+    <url>/2023/12/13/web%E6%A0%87%E5%87%86%E4%B8%8E%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="一、关于前端开发"><a href="#一、关于前端开发" class="headerlink" title="一、关于前端开发"></a>一、关于前端开发</h1><h2 id="前端的起源和架构"><a href="#前端的起源和架构" class="headerlink" title="前端的起源和架构"></a>前端的起源和架构</h2><p><strong>1989年诞生时，Web由三种技术构成：</strong></p>
+<ul>
+<li>HTML</li>
+<li>HTTP</li>
+<li>URL</li>
+</ul>
+<p><strong>CSS和Javascript是几年后才出现的,与HTML一起被称为前端的三驾马车。</strong></p>
+<h2 id="前端的变迁"><a href="#前端的变迁" class="headerlink" title="前端的变迁"></a>前端的变迁</h2><p><strong>1. 只读时代</strong>（1989 - 2004）</p>
+<p><strong>HTML&#x2F;CSS&#x2F;JavaScript</strong></p>
+<ul>
+<li>单向发布</li>
+<li>静态只读</li>
+<li>链接跳转</li>
+<li>刷新页面</li>
+<li>表格对齐元素</li>
+<li>CGI</li>
+</ul>
+<p><strong>2. 体验时代</strong>（2005 - 2010）</p>
+<p><strong>Ajax&#x2F;Web API&#x2F;jQuery</strong></p>
+<ul>
+<li>动态交互</li>
+<li>社交媒体</li>
+<li>用户生成内容（UGC）</li>
+<li>单页应用（SPA）</li>
+<li>jQuery</li>
+<li>YUI</li>
+</ul>
+<p><strong>3. 敏捷时代</strong>（2010 - 2023）</p>
+<p><strong>Fetch&#x2F;Node.js&#x2F;Webpack</strong></p>
+<ul>
+<li>模块化</li>
+<li>组件化</li>
+<li>转译（transpiling）</li>
+<li>打包（bunding）</li>
+<li>React.js</li>
+<li>Vue.js</li>
+</ul>
+<h2 id="前端应用的领域"><a href="#前端应用的领域" class="headerlink" title="前端应用的领域"></a>前端应用的领域</h2><p><strong>- To Business:</strong> 针对组织机构和企业所开发的企业级应用或网站。</p>
+<p><strong>- To Customer:</strong> 针对客户的门户网站、电商平台等的应用。</p>
+<p><strong>- To Developer:</strong> 针对开发者，提升开发者开发、调试、运维的速度和便捷性。</p>
+<p><strong>浏览器：</strong></p>
+<p>Google Chrome、Firefox、Safari、Opera、Brave、 Edge <strong>（Desktop）</strong></p>
+<p>Chrome、Safari <strong>（Mobile）</strong></p>
+<p><strong>服务器：</strong></p>
+<p>Node.js、Express.js、koa</p>
+<p><strong>终端和跨端：</strong></p>
+<ul>
+<li>命令行&#x2F;终端：Webpack CLI、Bable CLI、Vue CLI、React CIL</li>
+<li>桌面跨端：Electron、NW.js</li>
+<li>移动跨端：React Native、Flutter</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h3 id="前端技术的历史可以追溯到1989年，最初由HTML、HTTP和URL构成，后来加入了CSS和JavaScript，共同构成了前端开发的基础。"><a href="#前端技术的历史可以追溯到1989年，最初由HTML、HTTP和URL构成，后来加入了CSS和JavaScript，共同构成了前端开发的基础。" class="headerlink" title="前端技术的历史可以追溯到1989年，最初由HTML、HTTP和URL构成，后来加入了CSS和JavaScript，共同构成了前端开发的基础。"></a>前端技术的历史可以追溯到1989年，最初由HTML、HTTP和URL构成，后来加入了CSS和JavaScript，共同构成了前端开发的基础。</h3><h3 id="前端经历了几个关键时代的演变："><a href="#前端经历了几个关键时代的演变：" class="headerlink" title="前端经历了几个关键时代的演变："></a>前端经历了几个关键时代的演变：</h3><ul>
+<li><strong>只读时代（1989 - 2004）：</strong> 这个时期Web主要是静态只读的，以HTML、CSS和JavaScript为基础，用户进行简单的页面浏览和刷新。</li>
+<li><strong>体验时代（2005 - 2010）：</strong> 引入了Ajax技术和jQuery等工具，实现了动态交互和用户生成内容，开启了社交媒体的崛起。</li>
+<li><strong>敏捷时代（2010 - 2023）：</strong> 这一时期前端开发变得更工程化，引入了模块化、组件化、转译和打包等现代化概念，框架如React.js和Vue.js推动了组件化开发的兴起。</li>
+</ul>
+<p>前端应用领域包括面向企业的业务应用、面向客户的门户网站和电商平台，以及面向开发者的开发工具和框架。</p>
+<p>前端技术也应用在不同的环境中，包括各种桌面浏览器、移动浏览器，服务器端（Node.js、Express.js、koa等），以及跨终端开发（桌面跨端和移动跨端）。</p>
+<p>这些演变和应用领域的变化表明前端开发已经成为构建现代互联网应用的关键领域，从最初的简单页面到现在的复杂应用，前端技术一直在不断演进，以满足不断变化的需求。</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
       </tags>
   </entry>
 </search>
