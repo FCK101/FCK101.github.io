@@ -18,4 +18,91 @@
 <p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>learn-HTML</title>
+    <url>/2023/12/13/learn-HTML/</url>
+    <content><![CDATA[<h1 id="第一部分：前端"><a href="#第一部分：前端" class="headerlink" title="第一部分：前端"></a>第一部分：前端</h1><h2 id="知识点一：什么是前端？"><a href="#知识点一：什么是前端？" class="headerlink" title="知识点一：什么是前端？"></a><strong>知识点一：什么是前端？</strong></h2><ul>
+<li>解决GUI人机交互问题：</li>
+<li>跨终端<ul>
+<li>PC&#x2F;移动浏览器</li>
+<li>客户端&#x2F;小程序</li>
+<li>VR&#x2F;AR 等</li>
+</ul>
+</li>
+<li>Web技术栈</li>
+<li><strong>总结：前端工程师就是使用web技术栈解决多端图形用户交互界面的工程师</strong></li>
+</ul>
+<h2 id="知识点二：前端最基础的技术栈有哪些？"><a href="#知识点二：前端最基础的技术栈有哪些？" class="headerlink" title="知识点二：前端最基础的技术栈有哪些？"></a><strong>知识点二：前端最基础的技术栈有哪些？</strong></h2><ul>
+<li>HTML（内容）</li>
+<li>CSS（样式）</li>
+<li>JavaScript（行为）</li>
+<li>HTTP、TCP&#x2F;IP等的网路协议</li>
+</ul>
+<h2 id="知识点三：前端应该关注哪些方面？"><a href="#知识点三：前端应该关注哪些方面？" class="headerlink" title="知识点三：前端应该关注哪些方面？"></a><strong>知识点三：前端应该关注哪些方面？</strong></h2><ol>
+<li>功能</li>
+<li>美观</li>
+<li>无障碍</li>
+<li>安全</li>
+<li>性能</li>
+<li>兼容性</li>
+</ol>
+<h1 id="第二部分：HTML"><a href="#第二部分：HTML" class="headerlink" title="第二部分：HTML"></a>第二部分：HTML</h1><h2 id="知识点一：HTML是什么？"><a href="#知识点一：HTML是什么？" class="headerlink" title="知识点一：HTML是什么？"></a><strong>知识点一：HTML是什么？</strong></h2><ul>
+<li><strong>H</strong>yper<strong>T</strong>ext（图片、标题、链接、表格）</li>
+<li><strong>M</strong>arkup <strong>L</strong>anguage（标签） <code>&lt;h1&gt;标题&lt;/h1&gt;</code>、<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>等</li>
+<li>在<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>中，<em>src</em>为<strong>属性名</strong>，<em>photo.jpg</em>为<strong>属性值</strong></li>
+</ul>
+<h2 id="知识点二：DOM树"><a href="#知识点二：DOM树" class="headerlink" title="知识点二：DOM树"></a><strong>知识点二：DOM树</strong></h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mindmap</span><br><span class="line">      document</span><br><span class="line">          html</span><br><span class="line">              head</span><br><span class="line">                  meta</span><br><span class="line">                  title &quot;Page Title&quot;</span><br><span class="line">              body</span><br><span class="line">                  h1 &quot;Heading&quot;</span><br><span class="line">                  p &quot;Page Content&quot;</span><br></pre></td></tr></table></figure></div>
+<h2 id="知识点三：HTML语法"><a href="#知识点三：HTML语法" class="headerlink" title="知识点三：HTML语法"></a><strong>知识点三：HTML语法</strong></h2><ul>
+<li>标签和属性不区分大小写，推荐<strong>小写</strong></li>
+<li>空标签可以不闭合，比如 input、meta</li>
+<li>属性值推荐使用<strong>双引号</strong>包裹</li>
+<li>某些属性值可以忽略，比如 required、readonly</li>
+</ul>
+<p><strong>定义列表（dl）</strong>：dt（标题）、dd（具体描述）</p>
+<p><strong>跳转链接（a）</strong>：<code>&lt;a href=&quot;https://www.bytedance.com/&quot; target=&quot;_blank&quot;&gt;</code><br>添加了<code>target=&quot;_blank&quot;</code>属性后表示在新的界面打开网页。</p>
+<p><strong>图片（img）、音频（audio）、视频（video）</strong>：alt&#x3D;”加载失败时提示词”、controls（音频、视频控制属性）</p>
+<p><strong>块级引用（blockquote）</strong>:<code>&lt;blockquote cite=&quot;http://t.cn/RfjKO0F&quot;&gt;</code>cite属性值为引用来源</p>
+<p><strong>短引用（cite、q）</strong>：当引用了别人的名字或章节时使用使用<code>&lt;cite&gt;</code>，当引用具体致之前出现过的内容时用<code>&lt;q&gt;</code></p>
+<p><strong>代码引用（code、pre）</strong>：在界面出现代码时引用，当出现多行代码时需要在<code>&lt;code&gt;</code>标签外套一层<code>&lt;pre&gt;</code>标签</p>
+<p><strong>页面划分</strong>：常见的页面划分含有:</p>
+<ul>
+<li>页头<code>&lt;header&gt; </code>:可以存放logo以及导航栏<code>&lt;nav&gt;</code>等</li>
+<li>主体部分<code>&lt;main&gt;</code>:一般一个页面只有一个main元素，其中可包含文字内容<code>&lt;article&gt;</code></li>
+<li>侧边<code>&lt;aside&gt;</code>:可存放与主题部分无关的内容，如广告等</li>
+<li>页脚<code>&lt;footer&gt;</code>:放置参考链接，备案等内容</li>
+</ul>
+<h2 id="知识点四：语义化是什么？"><a href="#知识点四：语义化是什么？" class="headerlink" title="知识点四：语义化是什么？"></a><strong>知识点四：语义化是什么？</strong></h2><ul>
+<li>HTML中的<strong>元素</strong>、<strong>属性</strong>、以及<strong>属性值</strong>都拥有某些含义</li>
+<li>开发者应该遵循<strong>语义</strong>来编写HTML<ul>
+<li>有序列表用<strong>ol</strong>；无序列表用<strong>ul</strong></li>
+<li><strong>lang</strong>属性表示内容所使用的语言</li>
+</ul>
+</li>
+</ul>
+<h2 id="知识点五：谁在使用我们写的HTML？"><a href="#知识点五：谁在使用我们写的HTML？" class="headerlink" title="知识点五：谁在使用我们写的HTML？"></a><strong>知识点五：谁在使用我们写的HTML？</strong></h2><ul>
+<li>开发者 - 修改、维护界面</li>
+<li>浏览器 - 展示界面</li>
+<li>搜索引擎 - 提前关键词、排序</li>
+<li>屏幕阅读器 - 给盲人读页面内容</li>
+</ul>
+<h2 id="知识点六：语义化的好处"><a href="#知识点六：语义化的好处" class="headerlink" title="知识点六：语义化的好处"></a><strong>知识点六：语义化的好处</strong></h2><ul>
+<li>代码可读性</li>
+<li>可维护性</li>
+<li>搜索引擎优化</li>
+<li>提升无障碍性</li>
+</ul>
+<h2 id="知识点七：如何做到语义化？"><a href="#知识点七：如何做到语义化？" class="headerlink" title="知识点七：如何做到语义化？"></a><strong>知识点七：如何做到语义化？</strong></h2><ul>
+<li>了解每个标签和属性的含义</li>
+<li>思考什么标签最适合表述这个内容</li>
+<li>不使用可视化工具生成代码</li>
+</ul>
+<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>在HTML的开发和编写中的语义化是必不可少的，本节课程向我们讲述了多个帮助我们达到语义化的标签，如<code>&lt;blockquote&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;main&gt;</code>等的引用和划分元素标签，相较于直接使用常见标签，语义化的开发提升了我们的代码可读性和可维护性。</p>
+]]></content>
+      <categories>
+        <category>前端编程</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
 </search>
