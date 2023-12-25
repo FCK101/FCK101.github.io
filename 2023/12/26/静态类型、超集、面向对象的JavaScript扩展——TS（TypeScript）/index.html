@@ -17,22 +17,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://fck101.github.io/2023/12/13/前端与html-青训营/"/>
+    <link rel="canonical" href="https://fck101.github.io/2023/12/26/静态类型、超集、面向对象的javascript扩展——ts（typescript）/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="写好JS的原则一：各司其责让HTML、CSS和JavaScript职能分离例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式版本一： 12345678910111213const btn &#x3D; document.getElementById(&amp;#x27;modeBtn&amp;#x27;);btn.addEventListener(&amp;#x27;click&amp;#x27;, (e) &#x3D;&gt; &amp;">
+        <meta name="description" content="TypeScript介绍        本篇文章只对TypeScript进行了最基础的介绍，关于TS的更多文章请在“TS”标签内查看     什么是TS（TypeScript） ？TypeScript（简称 TS）是微软公司开发的一种基于 JavaScript （简称 JS）语言的编程语言。 它的目的并不是创造一种全新语言，而是增强 JavaScript 的功能，使其更适合多人合作的企业级项目。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端与HTML | 青训营">
-<meta property="og:url" content="https://fck101.github.io/2023/12/13/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML-%E9%9D%92%E8%AE%AD%E8%90%A5/index.html">
+<meta property="og:title" content="静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript）">
+<meta property="og:url" content="https://fck101.github.io/2023/12/26/%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E3%80%81%E8%B6%85%E9%9B%86%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84JavaScript%E6%89%A9%E5%B1%95%E2%80%94%E2%80%94TS%EF%BC%88TypeScript%EF%BC%89/index.html">
 <meta property="og:site_name" content="CuinnFan&#39;s Blog">
-<meta property="og:description" content="写好JS的原则一：各司其责让HTML、CSS和JavaScript职能分离例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式版本一： 12345678910111213const btn &#x3D; document.getElementById(&amp;#x27;modeBtn&amp;#x27;);btn.addEventListener(&amp;#x27;click&amp;#x27;, (e) &#x3D;&gt; &amp;">
+<meta property="og:description" content="TypeScript介绍        本篇文章只对TypeScript进行了最基础的介绍，关于TS的更多文章请在“TS”标签内查看     什么是TS（TypeScript） ？TypeScript（简称 TS）是微软公司开发的一种基于 JavaScript （简称 JS）语言的编程语言。 它的目的并不是创造一种全新语言，而是增强 JavaScript 的功能，使其更适合多人合作的企业级项目。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-13T07:40:46.000Z">
-<meta property="article:modified_time" content="2023-12-25T18:32:16.858Z">
+<meta property="article:published_time" content="2023-12-25T17:54:16.000Z">
+<meta property="article:modified_time" content="2023-12-25T18:34:36.752Z">
 <meta property="article:author" content="CuinnFan">
-<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="TypeScript">
 <meta name="twitter:card" content="summary">
     
     
@@ -45,7 +45,7 @@
     
     <title>
         
-            前端与HTML | 青训营 -
+            静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript） -
         
         CFcK博客
     </title>
@@ -333,7 +333,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">前端与HTML | 青训营</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript）</h1>
                 </div>
             
             </div>
@@ -354,15 +354,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-12-13 15:40:46</span>
-        <span class="mobile">2023-12-13 15:40:46</span>
+        <span class="desktop">2023-12-26 01:54:16</span>
+        <span class="mobile">2023-12-26 01:54:16</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-12-26 02:32:16</span>
-            <span class="mobile">2023-12-26 02:32:16</span>
+            <span class="desktop">2023-12-26 02:34:36</span>
+            <span class="mobile">2023-12-26 02:34:36</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -390,7 +390,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/HTML/">HTML</a>&nbsp;
+                        <a href="/tags/TypeScript/">TypeScript</a>&nbsp;
                     </li>
                 
             </ul>
@@ -416,50 +416,164 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="写好JS的原则一：各司其责"><a href="#写好JS的原则一：各司其责" class="headerlink" title="写好JS的原则一：各司其责"></a>写好JS的原则一：各司其责</h1><h2 id="让HTML、CSS和JavaScript职能分离"><a href="#让HTML、CSS和JavaScript职能分离" class="headerlink" title="让HTML、CSS和JavaScript职能分离"></a>让HTML、CSS和JavaScript职能分离</h2><h3 id="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"><a href="#例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式" class="headerlink" title="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"></a><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3><p><strong>版本一：</strong></p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">target</span>.<span class="property">innerHTML</span> === <span class="string">&#x27;🌞&#x27;</span>) &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌙&#x27;</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌞&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-<p><strong>版本二：</strong></p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span>(body.<span class="property">className</span> !== <span class="string">&#x27;night&#x27;</span>;) &#123;</span><br><span class="line">       body.<span class="property">className</span> = <span class="string">&#x27;night&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      body.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></div>
-<p><strong>版本三：</strong></p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;modeCheckBox&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;modeBtn&quot;</span> <span class="attr">for</span>=<span class="string">&quot;modeCheckBox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>深夜食堂<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    ........</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+            <h1 id="TypeScript介绍"><a href="#TypeScript介绍" class="headerlink" title="TypeScript介绍"></a>TypeScript介绍</h1>
+  <div class="note p-4 mb-4 rounded-small info">
+    <p>本篇文章只对TypeScript进行了最基础的介绍，关于TS的更多文章请在“TS”标签内查看</p>
 
-
-<div class="highlight-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#modeCheckBox</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#modeCheckBox</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+  </div>
+<h2 id="什么是TS（TypeScript）-？"><a href="#什么是TS（TypeScript）-？" class="headerlink" title="什么是TS（TypeScript） ？"></a>什么是TS（TypeScript） ？</h2><p>TypeScript（简称 TS）是微软公司开发的一种基于 JavaScript （简称 JS）语言的编程语言。</p>
+<p>它的目的并不是创造一种全新语言，而是增强 JavaScript 的功能，使其更适合多人合作的企业级项目。</p>
+<p>TypeScript 可以看成是 JavaScript 的超集（superset），即它继承了后者的全部语法，所有 JavaScript 脚本都可以当作 TypeScript 脚本（但是可能会报错），此外它再增加了一些自己的语法。</p>
+<p>TypeScript 对 JavaScript 添加的最主要部分，就是一个独立的类型系统。</p>
+<p>TypeScript 被广泛用于大型项目和前端开发，它为开发者提供了更强大的工具和语法，同时与 JavaScript 保持兼容性，使得现有的 JavaScript 代码可以逐步迁移到 TypeScript 中。</p>
 <blockquote>
-<p><strong>代码对比：</strong><br>版本二比版本一的代码更加整洁，版本一通过JS直接操作元素的style，而版本二是操作了classNam，且在开发中我们通常使用className来定义元素的状态。版本一中使用JS做了CSS该做的事情，没有做到HTML、CSS、JS的各司其责。版本二做到了结构表现行为分离，但是在纯样式改变的情况下只用CSS就可以实现，因此版本三是最佳的。</p>
+<p>TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准。</p>
+<p>TypeScript 由微软开发的自由和开源的编程语言。</p>
+<p>TypeScript 设计目标是开发大型应用，它可以编译成纯 JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上。</p>
 </blockquote>
-<h3 id="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"><a href="#总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。" class="headerlink" title="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"></a>总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</h3><h1 id="写好JS的原则二：组件封装"><a href="#写好JS的原则二：组件封装" class="headerlink" title="写好JS的原则二：组件封装"></a>写好JS的原则二：组件封装</h1><h2 id="好的UI组件具备正确性、扩展性、复用性"><a href="#好的UI组件具备正确性、扩展性、复用性" class="headerlink" title="好的UI组件具备正确性、扩展性、复用性"></a>好的UI组件具备正确性、扩展性、复用性</h2><p><strong>- 组件封装</strong>：组件是指Web页面上抽出来一个个包含模板（HTML）、功能（JS）、和样式（CSS）的单元。好用的组件具备封装性、正确性、扩展性、复用性。</p>
-<p><strong>- 组件设计的原则</strong>：封装性、正确性、扩展性、复用性。</p>
-<p><strong>- 实现组件的步骤</strong>：结构设计、展现效果、行为设计</p>
-<p><strong>- 三次重构：</strong></p>
+<p>TypeScript 代码示例：</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">x:<span class="built_in">string</span>|<span class="built_in">number</span></span>) &#123; </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> x === <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// ... </span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> x === <span class="string">&#x27;number&#x27;</span>) &#123; </span><br><span class="line">        <span class="comment">// ... </span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        x; <span class="comment">// never 类型 </span></span><br><span class="line">    &#125; </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>TS 的发展形势非常好，至今很多 JavaScript 项目都支持 TS，比如 Vue3 和 React 前端两大框架都支持 TS。</strong></p>
+<h2 id="TS相较于JS具体扩展了哪些内容？"><a href="#TS相较于JS具体扩展了哪些内容？" class="headerlink" title="TS相较于JS具体扩展了哪些内容？"></a>TS相较于JS具体扩展了哪些内容？</h2><p>TypeScript 是一种给 JavaScript 添加特性的语言扩展。增加的功能包括：</p>
+<blockquote>
 <ul>
-<li>插件化</li>
-<li>模板化</li>
-<li>抽象化（组件框架）</li>
+<li>类型批注和编译时类型检查</li>
+<li>类型推断</li>
+<li>类型擦除</li>
+<li>接口</li>
+<li>枚举</li>
+<li>Mixin</li>
+<li>泛型编程</li>
+<li>名字空间</li>
+<li>元组</li>
+<li>Await</li>
 </ul>
-<h1 id="写好JS的原则三：过程抽象"><a href="#写好JS的原则三：过程抽象" class="headerlink" title="写好JS的原则三：过程抽象"></a>写好JS的原则三：过程抽象</h1><h2 id="应用函数式编程思想"><a href="#应用函数式编程思想" class="headerlink" title="应用函数式编程思想"></a>应用函数式编程思想</h2><ul>
-<li>用来处理局部细节控制的一些方法</li>
-<li>函数式编程思想的基础应用</li>
-</ul>
-<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p><strong>- Once</strong>： 为了能够让“只执行一次”的需求覆盖不同的事件处理，我们可以将这个需求剥离出来。这个过程就称为<strong>过程抽象</strong>。</p>
-<p><strong>- HOF</strong>：</p>
+<p>以下功能是从 ECMA 2015 反向移植而来：</p>
 <ul>
-<li>以函数作为参数</li>
-<li>以函数作为返回值</li>
-<li>常用于作为函数修饰器</li>
+<li>类</li>
+<li>模块</li>
+<li>lambda 函数的箭头语法</li>
+<li>可选参数以及默认参数</li>
 </ul>
-<p><strong>- 常用高阶函数</strong>：</p>
+</blockquote>
+<p>我们可以直接的理解为TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现有的 JavaScript 代码可与 TypeScript 一起工作无需任何修改，TypeScript 通过类型注解提供编译时的静态类型检查。</p>
+<p><strong>TypeScript 可处理已有的 JavaScript 代码，并只对其中的 TypeScript 代码进行编译。</strong></p>
+<h1 id="上手TypeScript"><a href="#上手TypeScript" class="headerlink" title="上手TypeScript"></a>上手TypeScript</h1><h2 id="tsc-编译器"><a href="#tsc-编译器" class="headerlink" title="tsc 编译器"></a>tsc 编译器</h2><p>TypeScript 官方提供的编译器叫做 tsc，可以将 TypeScript 脚本编译成 JavaScript 脚本。本机想要编译 TypeScript 代码，必须安装 tsc。</p>
+<h3 id="使用npm安装"><a href="#使用npm安装" class="headerlink" title="使用npm安装"></a>使用npm安装</h3><p>安装TS需要用到npm工具，如果你的本地环境已经安装了 npm 工具，可以使用以下命令来安装。</p>
+<p>使用国内镜像：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></div>
+<p>安装：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure></div>
+<p><em>上面命令是全局安装 tsc，也可以在项目中将 tsc 安装为一个依赖模块。</em></p>
+<p>安装完成后我们可以使用 tsc 命令来执行 TypeScript 的相关代码，以下是查看版本号：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tsc -v</span><br><span class="line">Version 3.2.2</span><br></pre></td></tr></table></figure></div>
+<h3 id="编译脚本"><a href="#编译脚本" class="headerlink" title="编译脚本"></a>编译脚本</h3><p>根据约定，TypeScript 脚本文件使用<code>.ts</code>后缀名，JavaScript 脚本文件使用<code>.js</code>后缀名。tsc 的作用就是把<code>.ts</code>脚本转变成<code>.js</code>脚本。</p>
+<p>我们首先新建一个 app.ts 的文件，代码如下：</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="attr">message</span>:<span class="built_in">string</span> = <span class="string">&quot;Hello World&quot;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(message)</span><br></pre></td></tr></table></figure></div>
+
+<p>执行以下命令将 TypeScript 转换为 JavaScript 代码：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc app.ts</span><br></pre></td></tr></table></figure></div>
+<p>这时候在当前目录下（与 app.ts 同一目录）就会生成一个 app.js 文件，代码如下：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> message = <span class="string">&quot;Hello World&quot;</span>; <span class="variable language_">console</span>.<span class="title function_">log</span>(message);</span><br></pre></td></tr></table></figure></div>
+<p>使用 node 命令来执行 app.js 文件：</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node app.js </span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure></div>
+<h2 id="TypeScript基础"><a href="#TypeScript基础" class="headerlink" title="TypeScript基础"></a>TypeScript基础</h2><blockquote>
+<p>此部分用来介绍TypeScript 的一些最基本的语法和用法。</p>
+</blockquote>
+<h3 id="基础类型"><a href="#基础类型" class="headerlink" title="基础类型"></a>基础类型</h3><p>TypeScript 引入了一些基本类型，相比于JavaScript，这些类型在TypeScript中是静态类型的一部分，可以在编译时进行类型检查。以下是 TypeScript 的基本类型以及相较于 JavaScript 新增的一些类型：</p>
+<h4 id="TypeScript新增的类型："><a href="#TypeScript新增的类型：" class="headerlink" title="TypeScript新增的类型："></a>TypeScript新增的类型：</h4><ol>
+<li><p><strong>Tuple（元组）：</strong></p>
 <ul>
-<li>HOF（Once、Throttle、Debounce、Consumer&#x2F;2、Iterative）</li>
+<li>允许表示一个固定长度的数组，各元素可以有不同的类型。</li>
 </ul>
-<p><strong>- 编程范式</strong>：</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">myTuple</span>: [<span class="built_in">string</span>, <span class="built_in">number</span>] = [<span class="string">&#x27;TypeScript&#x27;</span>, <span class="number">2022</span>];</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Enum（枚举）：</strong></p>
 <ul>
-<li>过程抽象&#x2F;HOF&#x2F;装饰器</li>
-<li>命令式&#x2F;声明式</li>
+<li>允许为一组数值赋予友好的名字。</li>
 </ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="三个写JS代码的原则"><a href="#三个写JS代码的原则" class="headerlink" title="三个写JS代码的原则"></a>三个写JS代码的原则</h2><p><strong>一：各司其责，HTML、CSS。JS分别负责它们各自的任务，即结构、表现与行为。</strong></p>
-<p><strong>二：组件封装，组件封装的原则即考虑其复用性、可扩展性、正确性。对组件抽象，做插件化、模板化，从而实现组件框架。</strong></p>
-<p><strong>三：过程抽象，针对局部细节的实现与行为可以使用过程抽象，其是函数式编程的一个基本应用，其具有命令式和声明式两种不同的编程范式，声明式比命令式更具有可扩展性，在日常开发中我们可以更多的去考虑使用声明式来编写代码。</strong></p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Color</span> &#123;</span><br><span class="line">  <span class="title class_">Red</span>,</span><br><span class="line">  <span class="title class_">Green</span>,</span><br><span class="line">  <span class="title class_">Blue</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">myColor</span>: <span class="title class_">Color</span> = <span class="title class_">Color</span>.<span class="property">Green</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Any（任意类型）：</strong></p>
+<ul>
+<li>表示一个动态类型，可以在运行时改变类型。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">dynamicValue</span>: <span class="built_in">any</span> = <span class="string">&#x27;Hello TypeScript&#x27;</span>;</span><br><span class="line">dynamicValue = <span class="number">42</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Void（空类型）：</strong></p>
+<ul>
+<li>表示没有返回值的函数的返回类型。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">logMessage</span>(<span class="params"></span>): <span class="built_in">void</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;This function has no return value&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Never（永远不存在的值的类型）：</strong></p>
+<ul>
+<li>表示永远不会返回的函数的返回类型，或者抛出异常的函数。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throwError</span>(<span class="params">message: <span class="built_in">string</span></span>): <span class="built_in">never</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h4 id="JavaScript和TypeScript共有的基本类型："><a href="#JavaScript和TypeScript共有的基本类型：" class="headerlink" title="JavaScript和TypeScript共有的基本类型："></a>JavaScript和TypeScript共有的基本类型：</h4><ol>
+<li><p><strong>Boolean（布尔类型）：</strong></p>
+<ul>
+<li>表示逻辑值 <code>true</code> 或 <code>false</code>。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">isDone</span>: <span class="built_in">boolean</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Number（数字类型）：</strong></p>
+<ul>
+<li>表示数值，包括整数和浮点数。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">decimal</span>: <span class="built_in">number</span> = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="attr">pi</span>: <span class="built_in">number</span> = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>String（字符串类型）：</strong></p>
+<ul>
+<li>表示文本数据。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">message</span>: <span class="built_in">string</span> = <span class="string">&#x27;Hello, TypeScript!&#x27;</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Array（数组类型）：</strong></p>
+<ul>
+<li>表示一个数组，可以包含多个相同类型的元素。</li>
+</ul>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">numbers</span>: <span class="built_in">number</span>[] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p><strong>Object（对象类型）：</strong></p>
+<ul>
+<li>表示任意JavaScript对象。</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">typescriptCopy code</span><br><span class="line">let user: &#123; name: string, age: number &#125; = &#123; name: &#x27;John&#x27;, age: 30 &#125;;</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h3 id="类型声明"><a href="#类型声明" class="headerlink" title="类型声明"></a>类型声明</h3><p>TypeScript 代码最明显的特征，就是为 JavaScript 变量加上了类型声明。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">foo</span>: <span class="built_in">string</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，变量<code>foo</code>的后面使用冒号，声明了它的类型为<code>string</code>。</p>
+<p>类型声明的写法，一律为在标识符后面添加“冒号 + 类型”。函数参数和返回值，也是这样来声明类型。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">toString</span>(<span class="params">num: <span class="built_in">number</span></span>): <span class="built_in">string</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">String</span>(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，函数<code>toString()</code>的参数<code>num</code>的类型是<code>number</code>。参数列表的圆括号后面，声明了返回值的类型是<code>string</code>。更详细的介绍，参见《函数》一章。</p>
+<p>注意，变量的值应该与声明的类型一致，如果不一致，TypeScript 就会报错。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">foo</span>: <span class="built_in">string</span> = <span class="number">123</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，变量<code>foo</code>的类型是字符串，但是赋值为数值<code>123</code>，TypeScript 就报错了。</p>
+<p>另外，TypeScript 规定，变量只有赋值后才能使用，否则就会报错。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">x</span>: <span class="built_in">number</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，变量<code>x</code>没有赋值就被读取，导致报错。而 JavaScript 允许这种行为，不会报错，没有赋值的变量会返回<code>undefined</code>。</p>
+<h3 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h3><p>类型声明并不是必需的，如果没有，TypeScript 会自己推断类型。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="number">123</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，变量<code>foo</code>并没有类型声明，TypeScript 就会推断它的类型。由于它被赋值为一个数值，因此 TypeScript 推断它的类型为<code>number</code>。</p>
+<p>后面，如果变量<code>foo</code>更改为其他类型的值，跟推断的类型不一致，TypeScript 就会报错。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="number">123</span>;</span><br><span class="line">foo = <span class="string">&quot;hello&quot;</span>; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，变量<code>foo</code>的类型推断为<code>number</code>，后面赋值为字符串，TypeScript 就报错了。</p>
+<p>TypeScript 也可以推断函数的返回值。</p>
+<div class="highlight-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">toString</span>(<span class="params">num: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">String</span>(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>上面示例中，函数<code>toString()</code>没有声明返回值的类型，但是 TypeScript 推断返回的是字符串。正是因为 TypeScript 的类型推断，所以函数返回值的类型通常是省略不写的。</p>
+<p>从这里可以看到，TypeScript 的设计思想是，类型声明是可选的，你可以加，也可以不加。即使不加类型声明，依然是有效的 TypeScript 代码，只是这时不能保证 TypeScript 会正确推断出类型。由于这个原因。所有 JavaScript 代码都是合法的 TypeScript 代码。</p>
+<p>这样设计还有一个好处，将以前的 JavaScript 项目改为 TypeScript 项目时，你可以逐步地为老代码添加类型，即使有些代码没有添加，也不会无法运行。</p>
 
         </div>
 
@@ -467,18 +581,18 @@
             <div class="post-copyright-info my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 前端与HTML | 青训营</li>
+        <li><strong>标题:</strong> 静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript）</li>
         <li><strong>作者:</strong> CuinnFan</li>
         <li><strong>创建于
-                :</strong> 2023-12-13 15:40:46</li>
+                :</strong> 2023-12-26 01:54:16</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-12-26 02:32:16
+                    :</strong> 2023-12-26 02:34:36
             </li>
         
         <li>
-            <strong>链接:</strong> https://cuinnfanck.com/2023/12/13/前端与HTML-青训营/
+            <strong>链接:</strong> https://cuinnfanck.com/2023/12/26/静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript）/
         </li>
         <li>
             <strong>
@@ -500,7 +614,7 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/HTML/">#HTML</a>&nbsp;
+                        <a href="/tags/TypeScript/">#TypeScript</a>&nbsp;
                     </li>
                 
             </ul>
@@ -511,29 +625,14 @@
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/12/13/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%92%E8%AE%AD%E8%90%A5/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">前端设计模式 | 青训营</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
                         <a class="next"
                         rel="next"
-                        href="/2023/12/13/%E5%A6%82%E4%BD%95%E5%86%99%E5%A5%BDJs-%E9%9D%92%E8%AE%AD%E8%90%A5/"
+                        href="/2023/12/13/web%E6%A0%87%E5%87%86%E4%B8%8E%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E9%9D%92%E8%AE%AD%E8%90%A5/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">如何写好Js | 青训营</span>
+                                <span class="post-nav-title-item">web标准与前端开发 | 青训营</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -593,8 +692,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">前端与HTML | 青训营</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%A5%BDJS%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%80%EF%BC%9A%E5%90%84%E5%8F%B8%E5%85%B6%E8%B4%A3"><span class="nav-text">写好JS的原则一：各司其责</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A9HTML%E3%80%81CSS%E5%92%8CJavaScript%E8%81%8C%E8%83%BD%E5%88%86%E7%A6%BB"><span class="nav-text">让HTML、CSS和JavaScript职能分离</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%EF%BC%9A%E6%B7%B1%E5%A4%9C%E9%A3%9F%E5%A0%82%EF%BC%88%E5%86%99%E4%B8%80%E6%AE%B5JS%E3%80%81%E6%8E%A7%E5%88%B6%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%EF%BC%8C%E4%BD%BF%E5%85%B6%E6%94%AF%E6%8C%81%E6%B7%B1%E8%89%B2%E5%92%8C%E6%B5%85%E8%89%B2%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-text">例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9AHTML%E8%B4%9F%E8%B4%A3%E7%BB%93%E6%9E%84%EF%BC%8CCSS%E8%B4%9F%E8%B4%A3%E8%A1%A8%E7%8E%B0%EF%BC%8CJS%E8%B4%9F%E8%B4%A3%E8%A1%8C%E4%B8%BA%EF%BC%8C%E4%B8%94%E5%9C%A8%E7%BA%AF%E6%A0%B7%E5%BC%8F%E6%94%B9%E5%8F%98%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E6%9C%80%E5%A5%BD%E5%8F%AA%E7%94%A8CSS%E6%8E%A7%E5%88%B6%E6%A0%B7%E5%BC%8F%EF%BC%8C%E4%B8%8D%E5%8E%BB%E6%B7%BB%E5%8A%A0JS%E8%A1%8C%E4%B8%BA%E3%80%82%E5%90%84%E5%8F%B8%E5%85%B6%E8%B4%A3%E7%9A%84%E6%84%8F%E6%80%9D%E4%BE%BF%E6%98%AF%E7%BB%93%E6%9E%84%E3%80%81%E8%A1%A8%E7%8E%B0%E3%80%81%E8%A1%8C%E4%B8%BA%E5%88%86%E7%A6%BB%EF%BC%8C%E8%BF%99%E6%98%AF%E5%9C%A8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%AD%E6%89%80%E8%A6%81%E9%81%B5%E5%BE%AA%E7%9A%84%E4%B8%80%E4%B8%AA%E5%8E%9F%E5%88%99%E3%80%82"><span class="nav-text">总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%A5%BDJS%E7%9A%84%E5%8E%9F%E5%88%99%E4%BA%8C%EF%BC%9A%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85"><span class="nav-text">写好JS的原则二：组件封装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E7%9A%84UI%E7%BB%84%E4%BB%B6%E5%85%B7%E5%A4%87%E6%AD%A3%E7%A1%AE%E6%80%A7%E3%80%81%E6%89%A9%E5%B1%95%E6%80%A7%E3%80%81%E5%A4%8D%E7%94%A8%E6%80%A7"><span class="nav-text">好的UI组件具备正确性、扩展性、复用性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E5%A5%BDJS%E7%9A%84%E5%8E%9F%E5%88%99%E4%B8%89%EF%BC%9A%E8%BF%87%E7%A8%8B%E6%8A%BD%E8%B1%A1"><span class="nav-text">写好JS的原则三：过程抽象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3"><span class="nav-text">应用函数式编程思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0"><span class="nav-text">高阶函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E5%86%99JS%E4%BB%A3%E7%A0%81%E7%9A%84%E5%8E%9F%E5%88%99"><span class="nav-text">三个写JS代码的原则</span></a></li></ol></li></ol>
+        <div class="page-title">静态类型、超集、面向对象的JavaScript扩展——TS（TypeScript）</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TypeScript%E4%BB%8B%E7%BB%8D"><span class="nav-text">TypeScript介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFTS%EF%BC%88TypeScript%EF%BC%89-%EF%BC%9F"><span class="nav-text">什么是TS（TypeScript） ？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TS%E7%9B%B8%E8%BE%83%E4%BA%8EJS%E5%85%B7%E4%BD%93%E6%89%A9%E5%B1%95%E4%BA%86%E5%93%AA%E4%BA%9B%E5%86%85%E5%AE%B9%EF%BC%9F"><span class="nav-text">TS相较于JS具体扩展了哪些内容？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E6%89%8BTypeScript"><span class="nav-text">上手TypeScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tsc-%E7%BC%96%E8%AF%91%E5%99%A8"><span class="nav-text">tsc 编译器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8npm%E5%AE%89%E8%A3%85"><span class="nav-text">使用npm安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%84%9A%E6%9C%AC"><span class="nav-text">编译脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript%E5%9F%BA%E7%A1%80"><span class="nav-text">TypeScript基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B"><span class="nav-text">基础类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E"><span class="nav-text">类型声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD"><span class="nav-text">类型推断</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
