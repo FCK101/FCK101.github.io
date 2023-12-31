@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css//note.css">
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <header>
+
+            <!-- Main webpage top navigation bar -->
+            <div class="main-nav">
+                <div class="nav-left">
+                    <a href="../index.html"><img src="../images/Photo.jpg" alt="personalPhoto"></a>
+                </div>
+                <div class="nav-right">
+
+                    <!-- Study Notes drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Study Notes</a>
+                        <ul id="studyNotes" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./note1.html">Web standards and front-end development</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note2.html">Front end design mode</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note3.html">How to Write JS Code Well</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note4.html">Front end and HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JavaScript Tools drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">JavaScript Tools</a>
+                        <ul id="JSTools" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./Calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Random Number Generator.html">Random Number Generator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Dirty language blocking device.html">Dirty language blocking device</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Personal Projects</a>
+                        <ul id="personalProjects" class="dropdown-menu">
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <a class="link" href="#copyright">Go to Footer</a>
+
+                    <!-- Change Page Color Style Button -->
+                    <button type="button" id="modeBtn">🌙</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="page">
+
+        <!-- Article content -->
+        <article itemscope="itemscope" itemtype="http://schema.org/Article" data-entry-id="7267840969605529654" data-draft-id="7267577285276860451" data-original-type="0" class="article" data-v-125fc212="" data-v-5762947c="">
+            <!---->
+            <meta itemprop="headline" content="Day 09 前端设计模式 | 青训营">
+            <meta itemprop="keywords" content="青训营笔记">
+            <meta itemprop="datePublished" content="2023-08-16T16:45:08.000Z">
+            <meta itemprop="image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+            <div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="我才是梁启超">
+                <meta itemprop="url" content="https://juejin.cn/user/2377589157003277">
+            </div>
+            <div itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="掘金">
+                <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+                    <meta itemprop="url" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-white-180.png~tplv-t2oaga2asx-image.image">
+                    <meta itemprop="width" content="180">
+                    <meta itemprop="height" content="180">
+                </div>
+            </div>
+            <h1 class="article-title" data-v-125fc212="">
+                Day 09 前端设计模式 | 青训营
+                <!---->
+                <!---->
+            </h1>
+            <!---->
+            <!---->
+            <div id="article-root" itemprop="articleBody" class="article-viewer markdown-body cache result" data-v-125fc212="">
+                <h1 data-id="heading-0">一、什么是设计模式？</h1>
+                <h2 data-id="heading-1">软件设计中常见问题的解决方案模型</h2>
+                <ul>
+                    <li>历史经验的总结</li>
+                    <li>与特定语言无关</li>
+                </ul>
+                <h2 data-id="heading-2">设计模式背景</h2>
+                <ol>
+                    <li>模式语言：城镇、建筑、建造 (A Pattern Language: Towns, Buildings, Construction) 1977</li>
+                    <li>设计模式：可复用面向对象软件的基础 (Design Patterns: Elements of Reusable Object-Oriented Software) 1994</li>
+                </ol>
+                <h2 data-id="heading-3">设计模式分类</h2>
+                <p><strong>23种设计模式</strong></p>
+                <ul>
+                    <li><strong>创建型 -</strong> 如何创建一个对象</li>
+                    <li><strong>结构型 -</strong> 如何灵活的将对象组装成较大的结构</li>
+                    <li><strong>行为型 -</strong> 负责对象间的高效通信和职责划分</li>
+                </ul>
+                <h1 data-id="heading-4">二、浏览器中的设计模式</h1>
+                <h2 data-id="heading-5">单列模式</h2>
+                <p><strong>- 定义 ：</strong> 全局唯一访问对象</p>
+                <p><strong>- 应用场景 ：</strong> 缓存，全局状态管理等</p>
+                <h2 data-id="heading-6">用单列模式实现请求缓存</h2>
+                <p><strong>静态方法(getInstance) :</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">ts</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-ts code-block-extension-codeShowNum" lang="ts"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-keyword">static</span> <span class="hljs-title function_">getInstance</span>(<span class="hljs-params"></span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="2">    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">instance</span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="3">        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">instance</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="4">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="5"></span>
+<span class="code-block-extension-codeLine" data-line-num="6">    <span class="hljs-variable language_">this</span>.<span class="hljs-property">instance</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Request</span>();</span>
+<span class="code-block-extension-codeLine" data-line-num="7">    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">instance</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="8">}</span>
+</code></pre>
+                <p>如果instance存在就返回它，如果不存在就新建一个instanc并返回。</p>
+                <h2 data-id="heading-7">发布订阅模式</h2>
+                <p><strong>- 定义 ：</strong> 一种订阅机制，可在被订阅对象发生变化时通知订阅者。</p>
+                <p><strong>- 应用场景 ：</strong> 从系统架构之间的解耦，到业务中一些实现模式，像邮件订阅，上线订阅等等，应用广泛。</p>
+                <p><strong>如：</strong></p>
+                <p><strong>1. 用发布订阅模式绑定按钮</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">js</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-js code-block-extension-codeShowNum" lang="js"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-keyword">const</span> button = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementBtId</span>(<span class="hljs-string">"button"</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="2"></span>
+<span class="code-block-extension-codeLine" data-line-num="3"><span class="hljs-keyword">const</span> <span class="hljs-title function_">doSomting1</span> = (<span class="hljs-params"></span>) =&gt; {</span>
+<span class="code-block-extension-codeLine" data-line-num="4"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Send message to user"</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="5">};</span>
+<span class="code-block-extension-codeLine" data-line-num="6"></span>
+<span class="code-block-extension-codeLine" data-line-num="7"><span class="hljs-keyword">const</span> <span class="hljs-title function_">doSomting2</span> = (<span class="hljs-params"></span>) =&gt; {</span>
+<span class="code-block-extension-codeLine" data-line-num="8">    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Log..."</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="9">    };</span>
+<span class="code-block-extension-codeLine" data-line-num="10"></span>
+<span class="code-block-extension-codeLine" data-line-num="11">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">"click"</span>, doSomting1);</span>
+<span class="code-block-extension-codeLine" data-line-num="12">button.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">"click"</span>, doSomting2);</span>
+<span class="code-block-extension-codeLine" data-line-num="13"><span class="hljs-comment">// ...</span></span>
+</code></pre>
+                <p><strong>2. 用发布订阅模式实现用户上线订阅</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">js</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-js code-block-extension-codeShowNum" lang="js"><span class="code-block-extension-codeLine" data-line-num="1">type <span class="hljs-title class_">Notify</span> = <span class="hljs-function">(<span class="hljs-params">user: User</span>) =&gt;</span> <span class="hljs-keyword">void</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="2"></span>
+<span class="code-block-extension-codeLine" data-line-num="3"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="4">    <span class="hljs-attr">name</span>: string;</span>
+<span class="code-block-extension-codeLine" data-line-num="5">    <span class="hljs-attr">status</span>: <span class="hljs-string">"offline"</span> | <span class="hljs-string">"online"</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="6">    <span class="hljs-attr">followers</span>: { <span class="hljs-attr">user</span>: <span class="hljs-title class_">User</span>;<span class="hljs-attr">ontify</span>: <span class="hljs-title class_">Notify</span> }[];</span>
+<span class="code-block-extension-codeLine" data-line-num="7"></span>
+<span class="code-block-extension-codeLine" data-line-num="8">    <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name: string</span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="9">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;</span>
+<span class="code-block-extension-codeLine" data-line-num="10">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> = <span class="hljs-string">"offline"</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="11">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">followers</span> = [];</span>
+<span class="code-block-extension-codeLine" data-line-num="12">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="13"></span>
+<span class="code-block-extension-codeLine" data-line-num="14">    <span class="hljs-title function_">subscribe</span>(<span class="hljs-params">user: User, notify: Notify</span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="15">        user.<span class="hljs-property">followers</span>.<span class="hljs-title function_">push</span>({ user, notify });</span>
+<span class="code-block-extension-codeLine" data-line-num="16">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="17"></span>
+<span class="code-block-extension-codeLine" data-line-num="18">    <span class="hljs-title function_">online</span>(<span class="hljs-params"></span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="19">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">status</span> = <span class="hljs-string">"online"</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="20"></span>
+<span class="code-block-extension-codeLine" data-line-num="21">        <span class="hljs-variable language_">this</span>.<span class="hljs-property">followers</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">{ notify }</span>) =&gt;</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="22">            <span class="hljs-title function_">notify</span>(<span class="hljs-variable language_">this</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="23">        });</span>
+<span class="code-block-extension-codeLine" data-line-num="24">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="25">}</span>
+</code></pre>
+                <h1 data-id="heading-8">小节</h1>
+                <h2 data-id="heading-9">1.前端设计模式基本情况</h2>
+                <p><strong>1.1 设计模式定义</strong></p>
+                <p><strong>1.2 设计模式背景同步</strong></p>
+                <p><strong>1.3 设计模式发展趋势</strong></p>
+                <p><strong>1.4 设计模式分类</strong></p>
+                <h2 data-id="heading-10">2.浏览器中的设计模式</h2>
+                <p><strong>2.1 单例模式</strong></p>
+                <p><strong>2.2 发布订阅模式</strong></p>
+                <h2 data-id="heading-11"><em>设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用</em></h2>
+            </div>
+        </article>
+        <div id="titleWord"></div>
+        <div class="introduce-title"></div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            <div id="footer-notes">
+                <div class="footer-title">Study Notes</div>
+                <a href="./pages/note1.html">Front end design mode</a>
+                <a href="./pages/note2.html">How to Write JS Code Well</a>
+                <a href="./pages/note3.html">Front end and HTML</a>
+                <a href="./pages/note4.html">Web standards and front-end development</a>
+            </div>
+            <div id="footer-tools">
+                <div class="footer-title">JavaScript Tools</div>
+                <a href="./Calculator.html">Calculator</a>
+                <a href="./Random Number Generator.html">Random Number Generator</a>
+                <a href="./Dirty language blocking device.html">Dirty language blocking device</a>
+            </div>
+            <div id="footer-projects">
+                <div class="footer-title">Personal Projects</div>
+                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+            </div>
+            <div id="copyright">Copyright © 2023 Alex</div>
+        </footer>
+    </div>
+</body>
+<script src="../js/global.js"></script>
+
+</html>

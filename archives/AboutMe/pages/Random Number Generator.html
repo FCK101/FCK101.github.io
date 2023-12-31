@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        #page {
+            width: 70%;
+            min-height: 500px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px 30px;
+            box-shadow: 20px 20px 60px #253748, -20px -20px 60px #253748;
+            border-radius: 18px;
+            line-height: 60px;
+        }
+        
+        label {
+            margin: 20px 20px;
+        }
+        
+        button {
+            margin-left: 30px;
+        }
+        
+        .label-content {
+            display: inline-block;
+        }
+        
+        #result {
+            margin: 30px auto;
+            width: 100%;
+            min-height: 280px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <header>
+
+            <!-- Main webpage top navigation bar -->
+            <div class="main-nav">
+                <div class="nav-left">
+                    <a href="../index.html"><img src="../images/Photo.jpg" alt="personalPhoto"></a>
+                </div>
+                <div class="nav-right">
+
+                    <!-- Study Notes drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Study Notes</a>
+                        <ul id="studyNotes" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./note1.html">Web standards and front-end development</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note2.html">Front end design mode</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note3.html">How to Write JS Code Well</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note4.html">Front end and HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JavaScript Tools drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">JavaScript Tools</a>
+                        <ul id="JSTools" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./Calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Random Number Generator.html">Random Number Generator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Dirty language blocking device.html">Dirty language blocking device</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Personal Projects</a>
+                        <ul id="personalProjects" class="dropdown-menu">
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <a class="link" href="#copyright">Go to Footer</a>
+
+                    <!-- Change Page Color Style Button -->
+                    <button type="button" id="modeBtn">🌙</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div id="page">
+        <h1>Random Number Generator</h1>
+        <div class="label-content">
+            <label for="min">mini-alue:</label>
+            <input type="number" id="min" placeholder="minimum value">
+        </div>
+
+        <div class="label-content">
+            <label for="max">max-value:</label>
+            <input type="number" id="max" placeholder="Maximum value">
+        </div>
+
+        <br>
+        <div class="label-content">
+            <label for="count">Number of Generations:</label>
+            <input type="number" id="count" placeholder="Number of Generations" value="1">
+        </div>
+
+        <button id="generate">Generate random numbers</button>
+
+        <div id="result"></div>
+        <div id="titleWord"></div>
+        <div class="introduce-title"></div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            <div id="footer-notes">
+                <div class="footer-title">Study Notes</div>
+                <a href="./note1.html">Front end design mode</a>
+                <a href="./note2.html">How to Write JS Code Well</a>
+                <a href="./note3.html">Front end and HTML</a>
+                <a href="./note4.html">Web standards and front-end development</a>
+            </div>
+            <div id="footer-tools">
+                <div class="footer-title">JavaScript Tools</div>
+                <a href="./Calculator.html">Calculator</a>
+                <a href="./Random Number Generator.html">Random Number Generator</a>
+                <a href="./Dirty language blocking device.html">Dirty language blocking device</a>
+            </div>
+            <div id="footer-projects">
+                <div class="footer-title">Personal Projects</div>
+                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+            </div>
+            <div id="copyright">Copyright © 2023 Alex</div>
+        </footer>
+    </div>
+</body>
+<script src="../js/global.js"></script>
+<script src="../js/Random Number Generator.js"></script>
+
+</html>

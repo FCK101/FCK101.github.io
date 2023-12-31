@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css//note.css">
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <header>
+
+            <!-- Main webpage top navigation bar -->
+            <div class="main-nav">
+                <div class="nav-left">
+                    <a href="../index.html"><img src="../images/Photo.jpg" alt="personalPhoto"></a>
+                </div>
+                <div class="nav-right">
+
+                    <!-- Study Notes drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Study Notes</a>
+                        <ul id="studyNotes" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./note1.html">Web standards and front-end development</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note2.html">Front end design mode</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note3.html">How to Write JS Code Well</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./note4.html">Front end and HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JavaScript Tools drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">JavaScript Tools</a>
+                        <ul id="JSTools" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="./Calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Random Number Generator.html">Random Number Generator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="./Dirty language blocking device.html">Dirty language blocking device</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Personal Projects</a>
+                        <ul id="personalProjects" class="dropdown-menu">
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <a class="link" href="#copyright">Go to Footer</a>
+
+                    <!-- Change Page Color Style Button -->
+                    <button type="button" id="modeBtn">🌙</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="page">
+
+        <!-- Article content -->
+        <article itemscope="itemscope" itemtype="http://schema.org/Article" data-entry-id="7262702926736916540" data-draft-id="7261772340844183608" data-original-type="0" class="article" data-v-125fc212="" data-v-5762947c="">
+            <!---->
+            <meta itemprop="headline" content="Day 04 如何写好JS代码 | 青训营">
+            <meta itemprop="keywords" content="青训营笔记">
+            <meta itemprop="datePublished" content="2023-08-02T16:21:18.000Z">
+            <meta itemprop="image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+            <div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="我才是梁启超">
+                <meta itemprop="url" content="https://juejin.cn/user/2377589157003277">
+            </div>
+            <div itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="掘金">
+                <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+                    <meta itemprop="url" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-white-180.png~tplv-t2oaga2asx-image.image">
+                    <meta itemprop="width" content="180">
+                    <meta itemprop="height" content="180">
+                </div>
+            </div>
+            <h1 class="article-title" data-v-125fc212="">
+                Day 04 如何写好JS代码 | 青训营
+                <!---->
+                <!---->
+            </h1>
+            <!---->
+            <!---->
+            <div id="article-root" itemprop="articleBody" class="article-viewer markdown-body cache result" data-v-125fc212="">
+                <h1 data-id="heading-0">写好JS的原则一：各司其责</h1>
+                <h2 data-id="heading-1">让HTML、CSS和JavaScript职能分离</h2>
+                <h3 data-id="heading-2"><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3>
+                <p><strong>版本一：</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">js</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-js code-block-extension-codeShowNum" lang="js"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-keyword">const</span> btn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'modeBtn'</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="2">btn.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">'click'</span>, <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="3">    <span class="hljs-keyword">const</span> body = <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="4">    <span class="hljs-keyword">if</span> (e.<span class="hljs-property">target</span>.<span class="hljs-property">innerHTML</span> === <span class="hljs-string">'🌞'</span>) {</span>
+<span class="code-block-extension-codeLine" data-line-num="5">        body.<span class="hljs-property">style</span>.<span class="hljs-property">backgroundColor</span> = <span class="hljs-string">'black'</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="6">        body.<span class="hljs-property">style</span>.<span class="hljs-property">color</span> = <span class="hljs-string">'white'</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="7">        e.<span class="hljs-property">target</span>.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">'🌙'</span></span>
+<span class="code-block-extension-codeLine" data-line-num="8">    } <span class="hljs-keyword">else</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="9">        body.<span class="hljs-property">style</span>.<span class="hljs-property">backgroundColor</span> = <span class="hljs-string">'white'</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="10">        body.<span class="hljs-property">style</span>.<span class="hljs-property">color</span> = <span class="hljs-string">'black'</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="11">        e.<span class="hljs-property">target</span>.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">'🌞'</span></span>
+<span class="code-block-extension-codeLine" data-line-num="12">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="13">});</span>
+</code></pre>
+                <p><strong>版本二：</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">js</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-js code-block-extension-codeShowNum" lang="js"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-keyword">const</span> btn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'modeBtn'</span>);</span>
+<span class="code-block-extension-codeLine" data-line-num="2">btn.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">'click'</span>, <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="3">    <span class="hljs-keyword">const</span> body = <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="4">    <span class="hljs-keyword">if</span>(body.<span class="hljs-property">className</span> !== <span class="hljs-string">'night'</span>;) {</span>
+<span class="code-block-extension-codeLine" data-line-num="5">       body.<span class="hljs-property">className</span> = <span class="hljs-string">'night'</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="6">    } <span class="hljs-keyword">else</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="7">      body.<span class="hljs-property">className</span> = <span class="hljs-string">''</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="8">    }</span>
+<span class="code-block-extension-codeLine" data-line-num="9"> });</span>
+</code></pre>
+                <p><strong>版本三：</strong></p>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">html</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-html code-block-extension-codeShowNum" lang="html"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modeCheckBox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="3">    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="4">        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modeBtn"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"modeCheckBox"</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="5">        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>深夜食堂<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="6">    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span>
+<span class="code-block-extension-codeLine" data-line-num="7">    ........</span>
+<span class="code-block-extension-codeLine" data-line-num="8"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</code></pre>
+                <pre><div class="code-block-extension-header" style="background-color: rgb(248, 248, 248);"><div class="code-block-extension-headerLeft"><div class="code-block-extension-foldBtn">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.924 9.617A1 1 0 0 0 16 9H8a1 1 0 0 0-.707 1.707l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 .217-1.09z" data-name="Down"></path></svg> -->
+                </div></div><div class="code-block-extension-headerRight"><span class="code-block-extension-lang">css</span><div class="code-block-extension-copyCodeBtn">复制代码</div></div></div><code class="hljs language-css code-block-extension-codeShowNum" lang="css"><span class="code-block-extension-codeLine" data-line-num="1"><span class="hljs-selector-id">#modeCheckBox</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="2">    <span class="hljs-attribute">display</span>: none;</span>
+<span class="code-block-extension-codeLine" data-line-num="3">}</span>
+<span class="code-block-extension-codeLine" data-line-num="4"></span>
+<span class="code-block-extension-codeLine" data-line-num="5"><span class="hljs-selector-id">#modeCheckBox</span><span class="hljs-selector-pseudo">:checked</span> + <span class="hljs-selector-class">.content</span> {</span>
+<span class="code-block-extension-codeLine" data-line-num="6">    <span class="hljs-attribute">background-color</span>: black;</span>
+<span class="code-block-extension-codeLine" data-line-num="7">    <span class="hljs-attribute">color</span>: white;</span>
+<span class="code-block-extension-codeLine" data-line-num="8">    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span>;</span>
+<span class="code-block-extension-codeLine" data-line-num="9">}</span>
+</code></pre>
+                <blockquote>
+                    <p><strong>代码对比：</strong> 版本二比版本一的代码更加整洁，版本一通过JS直接操作元素的style，而版本二是操作了classNam，且在开发中我们通常使用className来定义元素的状态。版本一中使用JS做了CSS该做的事情，没有做到HTML、CSS、JS的各司其责。版本二做到了结构表现行为分离，但是在纯样式改变的情况下只用CSS就可以实现，因此版本三是最佳的。
+                    </p>
+                </blockquote>
+                <h3 data-id="heading-3">总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</h3>
+                <h1 data-id="heading-4">写好JS的原则二：组件封装</h1>
+                <h2 data-id="heading-5">好的UI组件具备正确性、扩展性、复用性</h2>
+                <p><strong>- 组件封装</strong>：组件是指Web页面上抽出来一个个包含模板（HTML）、功能（JS）、和样式（CSS）的单元。好用的组件具备封装性、正确性、扩展性、复用性。</p>
+                <p><strong>- 组件设计的原则</strong>：封装性、正确性、扩展性、复用性。</p>
+                <p><strong>- 实现组件的步骤</strong>：结构设计、展现效果、行为设计</p>
+                <p><strong>- 三次重构：</strong></p>
+                <ul>
+                    <li>插件化</li>
+                    <li>模板化</li>
+                    <li>抽象化（组件框架）</li>
+                </ul>
+                <h1 data-id="heading-6">写好JS的原则三：过程抽象</h1>
+                <h2 data-id="heading-7">应用函数式编程思想</h2>
+                <ul>
+                    <li>用来处理局部细节控制的一些方法</li>
+                    <li>函数式编程思想的基础应用</li>
+                </ul>
+                <h2 data-id="heading-8">高阶函数</h2>
+                <p><strong>- Once</strong>： 为了能够让“只执行一次”的需求覆盖不同的事件处理，我们可以将这个需求剥离出来。这个过程就称为<strong>过程抽象</strong>。</p>
+                <p><strong>- HOF</strong>：</p>
+                <ul>
+                    <li>以函数作为参数</li>
+                    <li>以函数作为返回值</li>
+                    <li>常用于作为函数修饰器</li>
+                </ul>
+                <p><strong>- 常用高阶函数</strong>：</p>
+                <ul>
+                    <li>HOF（Once、Throttle、Debounce、Consumer/2、Iterative）</li>
+                </ul>
+                <p><strong>- 编程范式</strong>：</p>
+                <ul>
+                    <li>过程抽象/HOF/装饰器</li>
+                    <li>命令式/声明式</li>
+                </ul>
+                <h1 data-id="heading-9">总结</h1>
+                <h2 data-id="heading-10">三个写JS代码的原则</h2>
+                <p><strong>一：各司其责，HTML、CSS。JS分别负责它们各自的任务，即结构、表现与行为。</strong></p>
+                <p><strong>二：组件封装，组件封装的原则即考虑其复用性、可扩展性、正确性。对组件抽象，做插件化、模板化，从而实现组件框架。</strong></p>
+                <p><strong>三：过程抽象，针对局部细节的实现与行为可以使用过程抽象，其是函数式编程的一个基本应用，其具有命令式和声明式两种不同的编程范式，声明式比命令式更具有可扩展性，在日常开发中我们可以更多的去考虑使用声明式来编写代码。</strong></p>
+            </div>
+        </article>
+        <div id="titleWord"></div>
+        <div class="introduce-title"></div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            <div id="footer-notes">
+                <div class="footer-title">Study Notes</div>
+                <a href="./note1.html">Front end design mode</a>
+                <a href="./note2.html">How to Write JS Code Well</a>
+                <a href="./note3.html">Front end and HTML</a>
+                <a href="./note4.html">Web standards and front-end development</a>
+            </div>
+            <div id="footer-tools">
+                <div class="footer-title">JavaScript Tools</div>
+                <a href="./Calculator.html">Calculator</a>
+                <a href="./Random Number Generator.html">Random Number Generator</a>
+                <a href="./Dirty language blocking device.html">Dirty language blocking device</a>
+            </div>
+            <div id="footer-projects">
+                <div class="footer-title">Personal Projects</div>
+                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+            </div>
+            <div id="copyright">Copyright © 2023 Alex</div>
+        </footer>
+    </div>
+</body>
+<script src="../js/global.js"></script>
+
+</html>
