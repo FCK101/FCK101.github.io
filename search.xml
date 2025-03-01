@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/12/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>前端与HTML | 青训营</title>
+    <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="写好JS的原则一：各司其责"><a href="#写好JS的原则一：各司其责" class="headerlink" title="写好JS的原则一：各司其责"></a>写好JS的原则一：各司其责</h1><h2 id="让HTML、CSS和JavaScript职能分离"><a href="#让HTML、CSS和JavaScript职能分离" class="headerlink" title="让HTML、CSS和JavaScript职能分离"></a>让HTML、CSS和JavaScript职能分离</h2><h3 id="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"><a href="#例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式" class="headerlink" title="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"></a><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3><p><strong>版本一：</strong></p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">target</span>.<span class="property">innerHTML</span> === <span class="string">&#x27;🌞&#x27;</span>) &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌙&#x27;</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌞&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p><strong>版本二：</strong></p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span>(body.<span class="property">className</span> !== <span class="string">&#x27;night&#x27;</span>;) &#123;</span><br><span class="line">       body.<span class="property">className</span> = <span class="string">&#x27;night&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      body.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></div>
+<p><strong>版本三：</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;modeCheckBox&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;modeBtn&quot;</span> <span class="attr">for</span>=<span class="string">&quot;modeCheckBox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>深夜食堂<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    ........</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+
+<div class="code-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#modeCheckBox</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#modeCheckBox</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p><strong>代码对比：</strong><br>版本二比版本一的代码更加整洁，版本一通过JS直接操作元素的style，而版本二是操作了classNam，且在开发中我们通常使用className来定义元素的状态。版本一中使用JS做了CSS该做的事情，没有做到HTML、CSS、JS的各司其责。版本二做到了结构表现行为分离，但是在纯样式改变的情况下只用CSS就可以实现，因此版本三是最佳的。</p>
+</blockquote>
+<h3 id="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"><a href="#总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。" class="headerlink" title="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"></a>总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</h3><h1 id="写好JS的原则二：组件封装"><a href="#写好JS的原则二：组件封装" class="headerlink" title="写好JS的原则二：组件封装"></a>写好JS的原则二：组件封装</h1><h2 id="好的UI组件具备正确性、扩展性、复用性"><a href="#好的UI组件具备正确性、扩展性、复用性" class="headerlink" title="好的UI组件具备正确性、扩展性、复用性"></a>好的UI组件具备正确性、扩展性、复用性</h2><p><strong>- 组件封装</strong>：组件是指Web页面上抽出来一个个包含模板（HTML）、功能（JS）、和样式（CSS）的单元。好用的组件具备封装性、正确性、扩展性、复用性。</p>
+<p><strong>- 组件设计的原则</strong>：封装性、正确性、扩展性、复用性。</p>
+<p><strong>- 实现组件的步骤</strong>：结构设计、展现效果、行为设计</p>
+<p><strong>- 三次重构：</strong></p>
+<ul>
+<li>插件化</li>
+<li>模板化</li>
+<li>抽象化（组件框架）</li>
+</ul>
+<h1 id="写好JS的原则三：过程抽象"><a href="#写好JS的原则三：过程抽象" class="headerlink" title="写好JS的原则三：过程抽象"></a>写好JS的原则三：过程抽象</h1><h2 id="应用函数式编程思想"><a href="#应用函数式编程思想" class="headerlink" title="应用函数式编程思想"></a>应用函数式编程思想</h2><ul>
+<li>用来处理局部细节控制的一些方法</li>
+<li>函数式编程思想的基础应用</li>
+</ul>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p><strong>- Once</strong>： 为了能够让“只执行一次”的需求覆盖不同的事件处理，我们可以将这个需求剥离出来。这个过程就称为<strong>过程抽象</strong>。</p>
+<p><strong>- HOF</strong>：</p>
+<ul>
+<li>以函数作为参数</li>
+<li>以函数作为返回值</li>
+<li>常用于作为函数修饰器</li>
+</ul>
+<p><strong>- 常用高阶函数</strong>：</p>
+<ul>
+<li>HOF（Once、Throttle、Debounce、Consumer&#x2F;2、Iterative）</li>
+</ul>
+<p><strong>- 编程范式</strong>：</p>
+<ul>
+<li>过程抽象&#x2F;HOF&#x2F;装饰器</li>
+<li>命令式&#x2F;声明式</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="三个写JS代码的原则"><a href="#三个写JS代码的原则" class="headerlink" title="三个写JS代码的原则"></a>三个写JS代码的原则</h2><p><strong>一：各司其责，HTML、CSS。JS分别负责它们各自的任务，即结构、表现与行为。</strong></p>
+<p><strong>二：组件封装，组件封装的原则即考虑其复用性、可扩展性、正确性。对组件抽象，做插件化、模板化，从而实现组件框架。</strong></p>
+<p><strong>三：过程抽象，针对局部细节的实现与行为可以使用过程抽象，其是函数式编程的一个基本应用，其具有命令式和声明式两种不同的编程范式，声明式比命令式更具有可扩展性，在日常开发中我们可以更多的去考虑使用声明式来编写代码。</strong></p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端设计模式 | 青训营</title>
+    <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="一、什么是设计模式？"><a href="#一、什么是设计模式？" class="headerlink" title="一、什么是设计模式？"></a>一、什么是设计模式？</h1><h2 id="软件设计中常见问题的解决方案模型"><a href="#软件设计中常见问题的解决方案模型" class="headerlink" title="软件设计中常见问题的解决方案模型"></a>软件设计中常见问题的解决方案模型</h2><ul>
+<li>历史经验的总结</li>
+<li>与特定语言无关</li>
+</ul>
+<h2 id="设计模式背景"><a href="#设计模式背景" class="headerlink" title="设计模式背景"></a>设计模式背景</h2><ol>
+<li>模式语言：城镇、建筑、建造 (A Pattern Language: Towns, Buildings, Construction) 1977</li>
+<li>设计模式：可复用面向对象软件的基础 (Design Patterns: Elements of Reusable Object-Oriented Software) 1994</li>
+</ol>
+<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p> <strong>23种设计模式</strong></p>
+<ul>
+<li><strong>创建型 -</strong> 如何创建一个对象</li>
+<li><strong>结构型 -</strong> 如何灵活的将对象组装成较大的结构</li>
+<li><strong>行为型 -</strong> 负责对象间的高效通信和职责划分</li>
+</ul>
+<h1 id="二、浏览器中的设计模式"><a href="#二、浏览器中的设计模式" class="headerlink" title="二、浏览器中的设计模式"></a>二、浏览器中的设计模式</h1><h2 id="单列模式"><a href="#单列模式" class="headerlink" title="单列模式"></a>单列模式</h2><p><strong>- 定义 ：</strong> 全局唯一访问对象</p>
+<p><strong>- 应用场景 ：</strong> 缓存，全局状态管理等</p>
+<h2 id="用单列模式实现请求缓存"><a href="#用单列模式实现请求缓存" class="headerlink" title="用单列模式实现请求缓存"></a>用单列模式实现请求缓存</h2><p><strong>静态方法(getInstance) :</strong></p>
+<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getInstance</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">instance</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">instance</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">instance</span> = <span class="keyword">new</span> <span class="title class_">Request</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">instance</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>如果instance存在就返回它，如果不存在就新建一个instanc并返回。</p>
+<h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p><strong>- 定义 ：</strong> 一种订阅机制，可在被订阅对象发生变化时通知订阅者。</p>
+<p><strong>- 应用场景 ：</strong> 从系统架构之间的解耦，到业务中一些实现模式，像邮件订阅，上线订阅等等，应用广泛。</p>
+<p><strong>如：</strong></p>
+<p><strong>1. 用发布订阅模式绑定按钮</strong></p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> button = <span class="variable language_">document</span>.<span class="title function_">getElementBtId</span>(<span class="string">&quot;button&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">doSomting1</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Send message to user&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">doSomting2</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Log...&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, doSomting1);</span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, doSomting2);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>2. 用发布订阅模式实现用户上线订阅</strong></p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">type <span class="title class_">Notify</span> = <span class="function">(<span class="params">user: User</span>) =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">status</span>: <span class="string">&quot;offline&quot;</span> | <span class="string">&quot;online&quot;</span>;</span><br><span class="line">    <span class="attr">followers</span>: &#123; <span class="attr">user</span>: <span class="title class_">User</span>;<span class="attr">ontify</span>: <span class="title class_">Notify</span> &#125;[];</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">name: string</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">status</span> = <span class="string">&quot;offline&quot;</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">followers</span> = [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">subscribe</span>(<span class="params">user: User, notify: Notify</span>) &#123;</span><br><span class="line">        user.<span class="property">followers</span>.<span class="title function_">push</span>(&#123; user, notify &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">online</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">status</span> = <span class="string">&quot;online&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">followers</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">&#123; notify &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">notify</span>(<span class="variable language_">this</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h1 id="小节"><a href="#小节" class="headerlink" title="小节"></a>小节</h1><h2 id="1-前端设计模式基本情况"><a href="#1-前端设计模式基本情况" class="headerlink" title="1.前端设计模式基本情况"></a>1.前端设计模式基本情况</h2><p><strong>1.1 设计模式定义</strong></p>
+<p><strong>1.2 设计模式背景同步</strong></p>
+<p><strong>1.3 设计模式发展趋势</strong></p>
+<p><strong>1.4 设计模式分类</strong></p>
+<h2 id="2-浏览器中的设计模式"><a href="#2-浏览器中的设计模式" class="headerlink" title="2.浏览器中的设计模式"></a>2.浏览器中的设计模式</h2><p><strong>2.1 单例模式</strong></p>
+<p><strong>2.2 发布订阅模式</strong></p>
+<h2 id="设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用"><a href="#设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用" class="headerlink" title="设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用"></a><em>设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用</em></h2>]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web标准与前端开发 | 青训营</title>
     <url>/2023/12/13/web%E6%A0%87%E5%87%86%E4%B8%8E%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
     <content><![CDATA[<h1 id="一、关于前端开发"><a href="#一、关于前端开发" class="headerlink" title="一、关于前端开发"></a>一、关于前端开发</h1><h2 id="前端的起源和架构"><a href="#前端的起源和架构" class="headerlink" title="前端的起源和架构"></a>前端的起源和架构</h2><p><strong>1989年诞生时，Web由三种技术构成：</strong></p>
@@ -71,59 +187,85 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/12/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>前端设计模式 | 青训营</title>
-    <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
-    <content><![CDATA[<h1 id="一、什么是设计模式？"><a href="#一、什么是设计模式？" class="headerlink" title="一、什么是设计模式？"></a>一、什么是设计模式？</h1><h2 id="软件设计中常见问题的解决方案模型"><a href="#软件设计中常见问题的解决方案模型" class="headerlink" title="软件设计中常见问题的解决方案模型"></a>软件设计中常见问题的解决方案模型</h2><ul>
-<li>历史经验的总结</li>
-<li>与特定语言无关</li>
+    <title>如何写好Js | 青训营</title>
+    <url>/2023/12/13/%E5%A6%82%E4%BD%95%E5%86%99%E5%A5%BDJs-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
+    <content><![CDATA[<h1 id="第一部分：前端"><a href="#第一部分：前端" class="headerlink" title="第一部分：前端"></a>第一部分：前端</h1><h2 id="知识点一：什么是前端？"><a href="#知识点一：什么是前端？" class="headerlink" title="知识点一：什么是前端？"></a><strong>知识点一：什么是前端？</strong></h2><ul>
+<li>解决GUI人机交互问题：</li>
+<li>跨终端<ul>
+<li>PC&#x2F;移动浏览器</li>
+<li>客户端&#x2F;小程序</li>
+<li>VR&#x2F;AR 等</li>
 </ul>
-<h2 id="设计模式背景"><a href="#设计模式背景" class="headerlink" title="设计模式背景"></a>设计模式背景</h2><ol>
-<li>模式语言：城镇、建筑、建造 (A Pattern Language: Towns, Buildings, Construction) 1977</li>
-<li>设计模式：可复用面向对象软件的基础 (Design Patterns: Elements of Reusable Object-Oriented Software) 1994</li>
+</li>
+<li>Web技术栈</li>
+<li><strong>总结：前端工程师就是使用web技术栈解决多端图形用户交互界面的工程师</strong></li>
+</ul>
+<h2 id="知识点二：前端最基础的技术栈有哪些？"><a href="#知识点二：前端最基础的技术栈有哪些？" class="headerlink" title="知识点二：前端最基础的技术栈有哪些？"></a><strong>知识点二：前端最基础的技术栈有哪些？</strong></h2><ul>
+<li>HTML（内容）</li>
+<li>CSS（样式）</li>
+<li>JavaScript（行为）</li>
+<li>HTTP、TCP&#x2F;IP等的网路协议</li>
+</ul>
+<h2 id="知识点三：前端应该关注哪些方面？"><a href="#知识点三：前端应该关注哪些方面？" class="headerlink" title="知识点三：前端应该关注哪些方面？"></a><strong>知识点三：前端应该关注哪些方面？</strong></h2><ol>
+<li>功能</li>
+<li>美观</li>
+<li>无障碍</li>
+<li>安全</li>
+<li>性能</li>
+<li>兼容性</li>
 </ol>
-<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p> <strong>23种设计模式</strong></p>
-<ul>
-<li><strong>创建型 -</strong> 如何创建一个对象</li>
-<li><strong>结构型 -</strong> 如何灵活的将对象组装成较大的结构</li>
-<li><strong>行为型 -</strong> 负责对象间的高效通信和职责划分</li>
+<h1 id="第二部分：HTML"><a href="#第二部分：HTML" class="headerlink" title="第二部分：HTML"></a>第二部分：HTML</h1><h2 id="知识点一：HTML是什么？"><a href="#知识点一：HTML是什么？" class="headerlink" title="知识点一：HTML是什么？"></a><strong>知识点一：HTML是什么？</strong></h2><ul>
+<li><strong>H</strong>yper<strong>T</strong>ext（图片、标题、链接、表格）</li>
+<li><strong>M</strong>arkup <strong>L</strong>anguage（标签） <code>&lt;h1&gt;标题&lt;/h1&gt;</code>、<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>等</li>
+<li>在<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>中，<em>src</em>为<strong>属性名</strong>，<em>photo.jpg</em>为<strong>属性值</strong></li>
 </ul>
-<h1 id="二、浏览器中的设计模式"><a href="#二、浏览器中的设计模式" class="headerlink" title="二、浏览器中的设计模式"></a>二、浏览器中的设计模式</h1><h2 id="单列模式"><a href="#单列模式" class="headerlink" title="单列模式"></a>单列模式</h2><p><strong>- 定义 ：</strong> 全局唯一访问对象</p>
-<p><strong>- 应用场景 ：</strong> 缓存，全局状态管理等</p>
-<h2 id="用单列模式实现请求缓存"><a href="#用单列模式实现请求缓存" class="headerlink" title="用单列模式实现请求缓存"></a>用单列模式实现请求缓存</h2><p><strong>静态方法(getInstance) :</strong></p>
-<div class="code-container" data-rel="Typescript"><figure class="iseeu highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getInstance</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">instance</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">instance</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">instance</span> = <span class="keyword">new</span> <span class="title class_">Request</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">instance</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>如果instance存在就返回它，如果不存在就新建一个instanc并返回。</p>
-<h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p><strong>- 定义 ：</strong> 一种订阅机制，可在被订阅对象发生变化时通知订阅者。</p>
-<p><strong>- 应用场景 ：</strong> 从系统架构之间的解耦，到业务中一些实现模式，像邮件订阅，上线订阅等等，应用广泛。</p>
-<p><strong>如：</strong></p>
-<p><strong>1. 用发布订阅模式绑定按钮</strong></p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> button = <span class="variable language_">document</span>.<span class="title function_">getElementBtId</span>(<span class="string">&quot;button&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">doSomting1</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Send message to user&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">doSomting2</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Log...&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, doSomting1);</span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, doSomting2);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure></div>
-<p><strong>2. 用发布订阅模式实现用户上线订阅</strong></p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">type <span class="title class_">Notify</span> = <span class="function">(<span class="params">user: User</span>) =&gt;</span> <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="attr">name</span>: string;</span><br><span class="line">    <span class="attr">status</span>: <span class="string">&quot;offline&quot;</span> | <span class="string">&quot;online&quot;</span>;</span><br><span class="line">    <span class="attr">followers</span>: &#123; <span class="attr">user</span>: <span class="title class_">User</span>;<span class="attr">ontify</span>: <span class="title class_">Notify</span> &#125;[];</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">name: string</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">status</span> = <span class="string">&quot;offline&quot;</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">followers</span> = [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">subscribe</span>(<span class="params">user: User, notify: Notify</span>) &#123;</span><br><span class="line">        user.<span class="property">followers</span>.<span class="title function_">push</span>(&#123; user, notify &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">online</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">status</span> = <span class="string">&quot;online&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">followers</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">&#123; notify &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">notify</span>(<span class="variable language_">this</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h1 id="小节"><a href="#小节" class="headerlink" title="小节"></a>小节</h1><h2 id="1-前端设计模式基本情况"><a href="#1-前端设计模式基本情况" class="headerlink" title="1.前端设计模式基本情况"></a>1.前端设计模式基本情况</h2><p><strong>1.1 设计模式定义</strong></p>
-<p><strong>1.2 设计模式背景同步</strong></p>
-<p><strong>1.3 设计模式发展趋势</strong></p>
-<p><strong>1.4 设计模式分类</strong></p>
-<h2 id="2-浏览器中的设计模式"><a href="#2-浏览器中的设计模式" class="headerlink" title="2.浏览器中的设计模式"></a>2.浏览器中的设计模式</h2><p><strong>2.1 单例模式</strong></p>
-<p><strong>2.2 发布订阅模式</strong></p>
-<h2 id="设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用"><a href="#设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用" class="headerlink" title="设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用"></a><em>设计模式并不复杂，重要的是其思维模式以及在不同编程语言及场景下的应用</em></h2>]]></content>
+<h2 id="知识点二：DOM树"><a href="#知识点二：DOM树" class="headerlink" title="知识点二：DOM树"></a><strong>知识点二：DOM树</strong></h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mindmap</span><br><span class="line">      document</span><br><span class="line">          html</span><br><span class="line">              head</span><br><span class="line">                  meta</span><br><span class="line">                  title &quot;Page Title&quot;</span><br><span class="line">              body</span><br><span class="line">                  h1 &quot;Heading&quot;</span><br><span class="line">                  p &quot;Page Content&quot;</span><br></pre></td></tr></table></figure></div>
+<h2 id="知识点三：HTML语法"><a href="#知识点三：HTML语法" class="headerlink" title="知识点三：HTML语法"></a><strong>知识点三：HTML语法</strong></h2><ul>
+<li>标签和属性不区分大小写，推荐<strong>小写</strong></li>
+<li>空标签可以不闭合，比如 input、meta</li>
+<li>属性值推荐使用<strong>双引号</strong>包裹</li>
+<li>某些属性值可以忽略，比如 required、readonly</li>
+</ul>
+<p><strong>定义列表（dl）</strong>：dt（标题）、dd（具体描述）</p>
+<p><strong>跳转链接（a）</strong>：<code>&lt;a href=&quot;https://www.bytedance.com/&quot; target=&quot;_blank&quot;&gt;</code><br>添加了<code>target=&quot;_blank&quot;</code>属性后表示在新的界面打开网页。</p>
+<p><strong>图片（img）、音频（audio）、视频（video）</strong>：alt&#x3D;”加载失败时提示词”、controls（音频、视频控制属性）</p>
+<p><strong>块级引用（blockquote）</strong>:<code>&lt;blockquote cite=&quot;http://t.cn/RfjKO0F&quot;&gt;</code>cite属性值为引用来源</p>
+<p><strong>短引用（cite、q）</strong>：当引用了别人的名字或章节时使用使用<code>&lt;cite&gt;</code>，当引用具体致之前出现过的内容时用<code>&lt;q&gt;</code></p>
+<p><strong>代码引用（code、pre）</strong>：在界面出现代码时引用，当出现多行代码时需要在<code>&lt;code&gt;</code>标签外套一层<code>&lt;pre&gt;</code>标签</p>
+<p><strong>页面划分</strong>：常见的页面划分含有:</p>
+<ul>
+<li>页头<code>&lt;header&gt; </code>:可以存放logo以及导航栏<code>&lt;nav&gt;</code>等</li>
+<li>主体部分<code>&lt;main&gt;</code>:一般一个页面只有一个main元素，其中可包含文字内容<code>&lt;article&gt;</code></li>
+<li>侧边<code>&lt;aside&gt;</code>:可存放与主题部分无关的内容，如广告等</li>
+<li>页脚<code>&lt;footer&gt;</code>:放置参考链接，备案等内容</li>
+</ul>
+<h2 id="知识点四：语义化是什么？"><a href="#知识点四：语义化是什么？" class="headerlink" title="知识点四：语义化是什么？"></a><strong>知识点四：语义化是什么？</strong></h2><ul>
+<li>HTML中的<strong>元素</strong>、<strong>属性</strong>、以及<strong>属性值</strong>都拥有某些含义</li>
+<li>开发者应该遵循<strong>语义</strong>来编写HTML<ul>
+<li>有序列表用<strong>ol</strong>；无序列表用<strong>ul</strong></li>
+<li><strong>lang</strong>属性表示内容所使用的语言</li>
+</ul>
+</li>
+</ul>
+<h2 id="知识点五：谁在使用我们写的HTML？"><a href="#知识点五：谁在使用我们写的HTML？" class="headerlink" title="知识点五：谁在使用我们写的HTML？"></a><strong>知识点五：谁在使用我们写的HTML？</strong></h2><ul>
+<li>开发者 - 修改、维护界面</li>
+<li>浏览器 - 展示界面</li>
+<li>搜索引擎 - 提前关键词、排序</li>
+<li>屏幕阅读器 - 给盲人读页面内容</li>
+</ul>
+<h2 id="知识点六：语义化的好处"><a href="#知识点六：语义化的好处" class="headerlink" title="知识点六：语义化的好处"></a><strong>知识点六：语义化的好处</strong></h2><ul>
+<li>代码可读性</li>
+<li>可维护性</li>
+<li>搜索引擎优化</li>
+<li>提升无障碍性</li>
+</ul>
+<h2 id="知识点七：如何做到语义化？"><a href="#知识点七：如何做到语义化？" class="headerlink" title="知识点七：如何做到语义化？"></a><strong>知识点七：如何做到语义化？</strong></h2><ul>
+<li>了解每个标签和属性的含义</li>
+<li>思考什么标签最适合表述这个内容</li>
+<li>不使用可视化工具生成代码</li>
+</ul>
+<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>在HTML的开发和编写中的语义化是必不可少的，本节课程向我们讲述了多个帮助我们达到语义化的标签，如<code>&lt;blockquote&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;main&gt;</code>等的引用和划分元素标签，相较于直接使用常见标签，语义化的开发提升了我们的代码可读性和可维护性。</p>
+]]></content>
       <categories>
         <category>前端开发</category>
       </categories>
@@ -324,148 +466,6 @@
       </categories>
       <tags>
         <tag>考研复试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端与HTML | 青训营</title>
-    <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
-    <content><![CDATA[<h1 id="写好JS的原则一：各司其责"><a href="#写好JS的原则一：各司其责" class="headerlink" title="写好JS的原则一：各司其责"></a>写好JS的原则一：各司其责</h1><h2 id="让HTML、CSS和JavaScript职能分离"><a href="#让HTML、CSS和JavaScript职能分离" class="headerlink" title="让HTML、CSS和JavaScript职能分离"></a>让HTML、CSS和JavaScript职能分离</h2><h3 id="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"><a href="#例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式" class="headerlink" title="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"></a><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3><p><strong>版本一：</strong></p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span> (e.<span class="property">target</span>.<span class="property">innerHTML</span> === <span class="string">&#x27;🌞&#x27;</span>) &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌙&#x27;</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        body.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;black&#x27;</span>;</span><br><span class="line">        e.<span class="property">target</span>.<span class="property">innerHTML</span> = <span class="string">&#x27;🌞&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-<p><strong>版本二：</strong></p>
-<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> btn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;modeBtn&#x27;</span>);</span><br><span class="line">btn.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> body = <span class="variable language_">document</span>.<span class="property">body</span>;</span><br><span class="line">    <span class="keyword">if</span>(body.<span class="property">className</span> !== <span class="string">&#x27;night&#x27;</span>;) &#123;</span><br><span class="line">       body.<span class="property">className</span> = <span class="string">&#x27;night&#x27;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      body.<span class="property">className</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></div>
-<p><strong>版本三：</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;modeCheckBox&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">id</span>=<span class="string">&quot;modeBtn&quot;</span> <span class="attr">for</span>=<span class="string">&quot;modeCheckBox&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>深夜食堂<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    ........</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-
-<div class="code-container" data-rel="Css"><figure class="iseeu highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#modeCheckBox</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#modeCheckBox</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<blockquote>
-<p><strong>代码对比：</strong><br>版本二比版本一的代码更加整洁，版本一通过JS直接操作元素的style，而版本二是操作了classNam，且在开发中我们通常使用className来定义元素的状态。版本一中使用JS做了CSS该做的事情，没有做到HTML、CSS、JS的各司其责。版本二做到了结构表现行为分离，但是在纯样式改变的情况下只用CSS就可以实现，因此版本三是最佳的。</p>
-</blockquote>
-<h3 id="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"><a href="#总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。" class="headerlink" title="总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。"></a>总结：HTML负责结构，CSS负责表现，JS负责行为，且在纯样式改变的情况下最好只用CSS控制样式，不去添加JS行为。各司其责的意思便是结构、表现、行为分离，这是在前端开发中所要遵循的一个原则。</h3><h1 id="写好JS的原则二：组件封装"><a href="#写好JS的原则二：组件封装" class="headerlink" title="写好JS的原则二：组件封装"></a>写好JS的原则二：组件封装</h1><h2 id="好的UI组件具备正确性、扩展性、复用性"><a href="#好的UI组件具备正确性、扩展性、复用性" class="headerlink" title="好的UI组件具备正确性、扩展性、复用性"></a>好的UI组件具备正确性、扩展性、复用性</h2><p><strong>- 组件封装</strong>：组件是指Web页面上抽出来一个个包含模板（HTML）、功能（JS）、和样式（CSS）的单元。好用的组件具备封装性、正确性、扩展性、复用性。</p>
-<p><strong>- 组件设计的原则</strong>：封装性、正确性、扩展性、复用性。</p>
-<p><strong>- 实现组件的步骤</strong>：结构设计、展现效果、行为设计</p>
-<p><strong>- 三次重构：</strong></p>
-<ul>
-<li>插件化</li>
-<li>模板化</li>
-<li>抽象化（组件框架）</li>
-</ul>
-<h1 id="写好JS的原则三：过程抽象"><a href="#写好JS的原则三：过程抽象" class="headerlink" title="写好JS的原则三：过程抽象"></a>写好JS的原则三：过程抽象</h1><h2 id="应用函数式编程思想"><a href="#应用函数式编程思想" class="headerlink" title="应用函数式编程思想"></a>应用函数式编程思想</h2><ul>
-<li>用来处理局部细节控制的一些方法</li>
-<li>函数式编程思想的基础应用</li>
-</ul>
-<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p><strong>- Once</strong>： 为了能够让“只执行一次”的需求覆盖不同的事件处理，我们可以将这个需求剥离出来。这个过程就称为<strong>过程抽象</strong>。</p>
-<p><strong>- HOF</strong>：</p>
-<ul>
-<li>以函数作为参数</li>
-<li>以函数作为返回值</li>
-<li>常用于作为函数修饰器</li>
-</ul>
-<p><strong>- 常用高阶函数</strong>：</p>
-<ul>
-<li>HOF（Once、Throttle、Debounce、Consumer&#x2F;2、Iterative）</li>
-</ul>
-<p><strong>- 编程范式</strong>：</p>
-<ul>
-<li>过程抽象&#x2F;HOF&#x2F;装饰器</li>
-<li>命令式&#x2F;声明式</li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="三个写JS代码的原则"><a href="#三个写JS代码的原则" class="headerlink" title="三个写JS代码的原则"></a>三个写JS代码的原则</h2><p><strong>一：各司其责，HTML、CSS。JS分别负责它们各自的任务，即结构、表现与行为。</strong></p>
-<p><strong>二：组件封装，组件封装的原则即考虑其复用性、可扩展性、正确性。对组件抽象，做插件化、模板化，从而实现组件框架。</strong></p>
-<p><strong>三：过程抽象，针对局部细节的实现与行为可以使用过程抽象，其是函数式编程的一个基本应用，其具有命令式和声明式两种不同的编程范式，声明式比命令式更具有可扩展性，在日常开发中我们可以更多的去考虑使用声明式来编写代码。</strong></p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何写好Js | 青训营</title>
-    <url>/2023/12/13/%E5%A6%82%E4%BD%95%E5%86%99%E5%A5%BDJs-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
-    <content><![CDATA[<h1 id="第一部分：前端"><a href="#第一部分：前端" class="headerlink" title="第一部分：前端"></a>第一部分：前端</h1><h2 id="知识点一：什么是前端？"><a href="#知识点一：什么是前端？" class="headerlink" title="知识点一：什么是前端？"></a><strong>知识点一：什么是前端？</strong></h2><ul>
-<li>解决GUI人机交互问题：</li>
-<li>跨终端<ul>
-<li>PC&#x2F;移动浏览器</li>
-<li>客户端&#x2F;小程序</li>
-<li>VR&#x2F;AR 等</li>
-</ul>
-</li>
-<li>Web技术栈</li>
-<li><strong>总结：前端工程师就是使用web技术栈解决多端图形用户交互界面的工程师</strong></li>
-</ul>
-<h2 id="知识点二：前端最基础的技术栈有哪些？"><a href="#知识点二：前端最基础的技术栈有哪些？" class="headerlink" title="知识点二：前端最基础的技术栈有哪些？"></a><strong>知识点二：前端最基础的技术栈有哪些？</strong></h2><ul>
-<li>HTML（内容）</li>
-<li>CSS（样式）</li>
-<li>JavaScript（行为）</li>
-<li>HTTP、TCP&#x2F;IP等的网路协议</li>
-</ul>
-<h2 id="知识点三：前端应该关注哪些方面？"><a href="#知识点三：前端应该关注哪些方面？" class="headerlink" title="知识点三：前端应该关注哪些方面？"></a><strong>知识点三：前端应该关注哪些方面？</strong></h2><ol>
-<li>功能</li>
-<li>美观</li>
-<li>无障碍</li>
-<li>安全</li>
-<li>性能</li>
-<li>兼容性</li>
-</ol>
-<h1 id="第二部分：HTML"><a href="#第二部分：HTML" class="headerlink" title="第二部分：HTML"></a>第二部分：HTML</h1><h2 id="知识点一：HTML是什么？"><a href="#知识点一：HTML是什么？" class="headerlink" title="知识点一：HTML是什么？"></a><strong>知识点一：HTML是什么？</strong></h2><ul>
-<li><strong>H</strong>yper<strong>T</strong>ext（图片、标题、链接、表格）</li>
-<li><strong>M</strong>arkup <strong>L</strong>anguage（标签） <code>&lt;h1&gt;标题&lt;/h1&gt;</code>、<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>等</li>
-<li>在<code>&lt;img src=&quot;photo.jpg&quot;/&gt;</code>中，<em>src</em>为<strong>属性名</strong>，<em>photo.jpg</em>为<strong>属性值</strong></li>
-</ul>
-<h2 id="知识点二：DOM树"><a href="#知识点二：DOM树" class="headerlink" title="知识点二：DOM树"></a><strong>知识点二：DOM树</strong></h2><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">mindmap</span><br><span class="line">      document</span><br><span class="line">          html</span><br><span class="line">              head</span><br><span class="line">                  meta</span><br><span class="line">                  title &quot;Page Title&quot;</span><br><span class="line">              body</span><br><span class="line">                  h1 &quot;Heading&quot;</span><br><span class="line">                  p &quot;Page Content&quot;</span><br></pre></td></tr></table></figure></div>
-<h2 id="知识点三：HTML语法"><a href="#知识点三：HTML语法" class="headerlink" title="知识点三：HTML语法"></a><strong>知识点三：HTML语法</strong></h2><ul>
-<li>标签和属性不区分大小写，推荐<strong>小写</strong></li>
-<li>空标签可以不闭合，比如 input、meta</li>
-<li>属性值推荐使用<strong>双引号</strong>包裹</li>
-<li>某些属性值可以忽略，比如 required、readonly</li>
-</ul>
-<p><strong>定义列表（dl）</strong>：dt（标题）、dd（具体描述）</p>
-<p><strong>跳转链接（a）</strong>：<code>&lt;a href=&quot;https://www.bytedance.com/&quot; target=&quot;_blank&quot;&gt;</code><br>添加了<code>target=&quot;_blank&quot;</code>属性后表示在新的界面打开网页。</p>
-<p><strong>图片（img）、音频（audio）、视频（video）</strong>：alt&#x3D;”加载失败时提示词”、controls（音频、视频控制属性）</p>
-<p><strong>块级引用（blockquote）</strong>:<code>&lt;blockquote cite=&quot;http://t.cn/RfjKO0F&quot;&gt;</code>cite属性值为引用来源</p>
-<p><strong>短引用（cite、q）</strong>：当引用了别人的名字或章节时使用使用<code>&lt;cite&gt;</code>，当引用具体致之前出现过的内容时用<code>&lt;q&gt;</code></p>
-<p><strong>代码引用（code、pre）</strong>：在界面出现代码时引用，当出现多行代码时需要在<code>&lt;code&gt;</code>标签外套一层<code>&lt;pre&gt;</code>标签</p>
-<p><strong>页面划分</strong>：常见的页面划分含有:</p>
-<ul>
-<li>页头<code>&lt;header&gt; </code>:可以存放logo以及导航栏<code>&lt;nav&gt;</code>等</li>
-<li>主体部分<code>&lt;main&gt;</code>:一般一个页面只有一个main元素，其中可包含文字内容<code>&lt;article&gt;</code></li>
-<li>侧边<code>&lt;aside&gt;</code>:可存放与主题部分无关的内容，如广告等</li>
-<li>页脚<code>&lt;footer&gt;</code>:放置参考链接，备案等内容</li>
-</ul>
-<h2 id="知识点四：语义化是什么？"><a href="#知识点四：语义化是什么？" class="headerlink" title="知识点四：语义化是什么？"></a><strong>知识点四：语义化是什么？</strong></h2><ul>
-<li>HTML中的<strong>元素</strong>、<strong>属性</strong>、以及<strong>属性值</strong>都拥有某些含义</li>
-<li>开发者应该遵循<strong>语义</strong>来编写HTML<ul>
-<li>有序列表用<strong>ol</strong>；无序列表用<strong>ul</strong></li>
-<li><strong>lang</strong>属性表示内容所使用的语言</li>
-</ul>
-</li>
-</ul>
-<h2 id="知识点五：谁在使用我们写的HTML？"><a href="#知识点五：谁在使用我们写的HTML？" class="headerlink" title="知识点五：谁在使用我们写的HTML？"></a><strong>知识点五：谁在使用我们写的HTML？</strong></h2><ul>
-<li>开发者 - 修改、维护界面</li>
-<li>浏览器 - 展示界面</li>
-<li>搜索引擎 - 提前关键词、排序</li>
-<li>屏幕阅读器 - 给盲人读页面内容</li>
-</ul>
-<h2 id="知识点六：语义化的好处"><a href="#知识点六：语义化的好处" class="headerlink" title="知识点六：语义化的好处"></a><strong>知识点六：语义化的好处</strong></h2><ul>
-<li>代码可读性</li>
-<li>可维护性</li>
-<li>搜索引擎优化</li>
-<li>提升无障碍性</li>
-</ul>
-<h2 id="知识点七：如何做到语义化？"><a href="#知识点七：如何做到语义化？" class="headerlink" title="知识点七：如何做到语义化？"></a><strong>知识点七：如何做到语义化？</strong></h2><ul>
-<li>了解每个标签和属性的含义</li>
-<li>思考什么标签最适合表述这个内容</li>
-<li>不使用可视化工具生成代码</li>
-</ul>
-<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>在HTML的开发和编写中的语义化是必不可少的，本节课程向我们讲述了多个帮助我们达到语义化的标签，如<code>&lt;blockquote&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;main&gt;</code>等的引用和划分元素标签，相较于直接使用常见标签，语义化的开发提升了我们的代码可读性和可维护性。</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
