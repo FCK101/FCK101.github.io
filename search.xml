@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/12/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>前端与HTML | 青训营</title>
     <url>/2023/12/13/%E5%89%8D%E7%AB%AF%E4%B8%8EHTML-%E9%9D%92%E8%AE%AD%E8%90%A5/</url>
     <content><![CDATA[<h1 id="写好JS的原则一：各司其责"><a href="#写好JS的原则一：各司其责" class="headerlink" title="写好JS的原则一：各司其责"></a>写好JS的原则一：各司其责</h1><h2 id="让HTML、CSS和JavaScript职能分离"><a href="#让HTML、CSS和JavaScript职能分离" class="headerlink" title="让HTML、CSS和JavaScript职能分离"></a>让HTML、CSS和JavaScript职能分离</h2><h3 id="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"><a href="#例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式" class="headerlink" title="例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式"></a><strong>例：深夜食堂（写一段JS、控制一个网页，使其支持深色和浅色两种模式</strong></h3><p><strong>版本一：</strong></p>
@@ -71,6 +53,7 @@
       </categories>
       <tags>
         <tag>HTML</tag>
+        <tag>青训营</tag>
       </tags>
   </entry>
   <entry>
@@ -114,6 +97,7 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+        <tag>青训营</tag>
       </tags>
   </entry>
   <entry>
@@ -184,6 +168,7 @@
       </categories>
       <tags>
         <tag>HTML</tag>
+        <tag>青训营</tag>
       </tags>
   </entry>
   <entry>
@@ -271,6 +256,7 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+        <tag>青训营</tag>
       </tags>
   </entry>
   <entry>
@@ -462,7 +448,7 @@
 <p>希望这个复习计划能够帮助你顺利通过复试机考！祝你考试顺利！</p>
 ]]></content>
       <categories>
-        <category>考研</category>
+        <category>计划清单</category>
       </categories>
       <tags>
         <tag>考研复试</tag>
