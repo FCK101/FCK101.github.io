@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css//note.css">
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <header>
+
+            <!-- Main webpage top navigation bar -->
+            <div class="main-nav">
+                <div class="nav-left">
+                    <a href="../index.html">
+                        <img src="../images/Photo.jpg" alt="personalPhoto">
+                    </a>
+                </div>
+                <div class="nav-right">
+
+                    <!-- Study Notes drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Study Notes</a>
+                        <ul id="studyNotes" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="../pages/note1.html">Web standards and front-end development</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note2.html">Front end design mode</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note3.html">How to Write JS Code Well</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note4.html">Front end and HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JavaScript Tools drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">JavaScript Tools</a>
+                        <ul id="JSTools" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="../pages/Calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/Random Number Generator.html">Random Number Generator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/Dirty language blocking device.html">Dirty language blocking device</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Personal Projects</a>
+                        <ul id="personalProjects" class="dropdown-menu">
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <a class="link" href="#">Go to Footer</a>
+
+                    <!-- Change Page Color Style Button -->
+                    <button type="button" id="modeBtn">🌙</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="pages">
+
+        <!-- Article content -->
+        <article itemscope="itemscope" itemtype="http://schema.org/Article" data-entry-id="7270427148191842359" data-draft-id="7268945005750370360" data-original-type="0" class="article" data-v-125fc212="" data-v-5762947c="">
+            <!---->
+            <meta itemprop="headline" content="Day 06 web标准与前端开发 | 青训营">
+            <meta itemprop="keywords" content="青训营笔记">
+            <meta itemprop="datePublished" content="2023-08-23T14:34:41.000Z">
+            <meta itemprop="image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+            <div itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+                <meta itemprop="name" content="我才是梁启超">
+                <meta itemprop="url" content="https://juejin.cn/user/2377589157003277">
+            </div>
+            <div itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization">
+                <meta itemprop="name" content="掘金">
+                <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+                    <meta itemprop="url" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-white-180.png~tplv-t2oaga2asx-image.image">
+                    <meta itemprop="width" content="180">
+                    <meta itemprop="height" content="180">
+                </div>
+            </div>
+            <h1 class="article-title" data-v-125fc212="">
+                Day 06 web标准与前端开发 | 青训营
+                <!---->
+                <!---->
+            </h1>
+            <!---->
+            <!---->
+            <div id="article-root" itemprop="articleBody" class="article-viewer markdown-body cache result" data-v-125fc212="">
+                <h1 data-id="heading-0">一、关于前端开发</h1>
+                <h2 data-id="heading-1">前端的起源和架构</h2>
+                <p><strong>1989年诞生时，Web由三种技术构成：</strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>HTTP</li>
+                    <li>URL</li>
+                </ul>
+                <p><strong>CSS和Javascript是几年后才出现的,与HTML一起被称为前端的三驾马车。</strong></p>
+                <h2 data-id="heading-2">前端的变迁</h2>
+                <p><strong>1. 只读时代</strong>（1989 - 2004）</p>
+                <p><strong>HTML/CSS/JavaScript</strong></p>
+                <ul>
+                    <li>单向发布</li>
+                    <li>静态只读</li>
+                    <li>链接跳转</li>
+                    <li>刷新页面</li>
+                    <li>表格对齐元素</li>
+                    <li>CGI</li>
+                </ul>
+                <p><strong>2. 体验时代</strong>（2005 - 2010）</p>
+                <p><strong>Ajax/Web API/jQuery</strong></p>
+                <ul>
+                    <li>动态交互</li>
+                    <li>社交媒体</li>
+                    <li>用户生成内容（UGC）</li>
+                    <li>单页应用（SPA）</li>
+                    <li>jQuery</li>
+                    <li>YUI</li>
+                </ul>
+                <p><strong>3. 敏捷时代</strong>（2010 - 2023）</p>
+                <p><strong>Fetch/Node.js/Webpack</strong></p>
+                <ul>
+                    <li>模块化</li>
+                    <li>组件化</li>
+                    <li>转译（transpiling）</li>
+                    <li>打包（bunding）</li>
+                    <li>React.js</li>
+                    <li>Vue.js</li>
+                </ul>
+                <h2 data-id="heading-3">前端应用的领域</h2>
+                <p><strong>- To Business:</strong> 针对组织机构和企业所开发的企业级应用或网站。</p>
+                <p><strong>- To Customer:</strong> 针对客户的门户网站、电商平台等的应用。</p>
+                <p><strong>- To Developer:</strong> 针对开发者，提升开发者开发、调试、运维的速度和便捷性。</p>
+                <p><strong>浏览器：</strong></p>
+                <p>Google Chrome、Firefox、Safari、Opera、Brave、 Edge <strong>（Desktop）</strong></p>
+                <p>Chrome、Safari <strong>（Mobile）</strong></p>
+                <p><strong>服务器：</strong></p>
+                <p>Node.js、Express.js、koa</p>
+                <p><strong>终端和跨端：</strong></p>
+                <ul>
+                    <li>命令行/终端：Webpack CLI、Bable CLI、Vue CLI、React CIL</li>
+                    <li>桌面跨端：Electron、NW.js</li>
+                    <li>移动跨端：React Native、Flutter</li>
+                </ul>
+                <h1 data-id="heading-4">总结</h1>
+                <h3 data-id="heading-5">前端技术的历史可以追溯到1989年，最初由HTML、HTTP和URL构成，后来加入了CSS和JavaScript，共同构成了前端开发的基础。</h3>
+                <h3 data-id="heading-6">前端经历了几个关键时代的演变：</h3>
+                <ul>
+                    <li><strong>只读时代（1989 - 2004）：</strong> 这个时期Web主要是静态只读的，以HTML、CSS和JavaScript为基础，用户进行简单的页面浏览和刷新。</li>
+                    <li><strong>体验时代（2005 - 2010）：</strong> 引入了Ajax技术和jQuery等工具，实现了动态交互和用户生成内容，开启了社交媒体的崛起。</li>
+                    <li><strong>敏捷时代（2010 - 2023）：</strong> 这一时期前端开发变得更工程化，引入了模块化、组件化、转译和打包等现代化概念，框架如React.js和Vue.js推动了组件化开发的兴起。</li>
+                </ul>
+                <p>前端应用领域包括面向企业的业务应用、面向客户的门户网站和电商平台，以及面向开发者的开发工具和框架。</p>
+                <p>前端技术也应用在不同的环境中，包括各种桌面浏览器、移动浏览器，服务器端（Node.js、Express.js、koa等），以及跨终端开发（桌面跨端和移动跨端）。</p>
+                <p>这些演变和应用领域的变化表明前端开发已经成为构建现代互联网应用的关键领域，从最初的简单页面到现在的复杂应用，前端技术一直在不断演进，以满足不断变化的需求。</p>
+            </div>
+        </article>
+        <div id="titleWord"></div>
+        <div class="introduce-title"></div>
+    </div>
+
+    <div id="footer-wrapper">
+        <footer>
+            <div id="footer-notes">
+                <div class="footer-title">Study Notes</div>
+                <a href="../pages/note1.html">Front end design mode</a>
+                <a href="../pages/note2.html">How to Write JS Code Well</a>
+                <a href="../pages/note3.html">Front end and HTML</a>
+                <a href="../pages/note4.html">Web standards and front-end development</a>
+            </div>
+            <div id="footer-tools">
+                <div class="footer-title">JavaScript Tools</div>
+                <a href="../pages/Calculator.html">Calculator</a>
+                <a href="../pages/Random Number Generator.html">Random Number Generator</a>
+                <a href="../pages/Dirty language blocking device.html">Dirty language blocking device</a>
+            </div>
+            <div id="footer-projects">
+                <div class="footer-title">Personal Projects</div>
+                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+            </div>
+            <div id="copyright">Copyright © 2023 CuinnFan</div>
+        </footer>
+    </div>
+</body>
+<script src="../js/global.js"></script>
+
+</html>

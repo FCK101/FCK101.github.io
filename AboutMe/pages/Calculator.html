@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        #page {
+            width: 70%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px 30px;
+            box-shadow: 20px 20px 60px #253748, -20px -20px 60px #253748;
+            border-radius: 18px;
+        }
+        
+        ul,
+        li,
+        select {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        .calculator {
+            max-width: 300px;
+            margin: 20px auto;
+            border: 1px solid #000000;
+            border-radius: 3px;
+        }
+        
+        .cal-header {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            height: 48px;
+            line-height: 48px;
+            border-bottom: 1px solid #000000;
+            text-align: center;
+        }
+        
+        .cal-main {
+            font-size: 14px;
+        }
+        
+        .cal-main .origin-value {
+            padding: 15px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: right;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .cal-main .origin-type,
+        .cal-main .target-type {
+            padding-left: 5px;
+            width: 70px;
+            font-size: 14px;
+            height: 30px;
+            border: 1px solid #000000;
+            background-color: #000000;
+            vertical-align: middle;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        .cal-keyboard {
+            overflow: hidden;
+        }
+        
+        .cal-items {
+            overflow: hidden;
+        }
+        
+        .cal-items li {
+            user-select: none;
+            float: left;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 75px;
+            border-top: 1px solid #000000;
+            border-left: 1px solid #000000;
+            box-sizing: border-box;
+        }
+        
+        li:nth-of-type(4n+1) {
+            border-left: none;
+        }
+        
+        li[data-action=operator] {
+            background: #10283a9a;
+            color: #fff;
+        }
+        
+        .buttons {
+            float: left;
+            width: 75px;
+        }
+        
+        .buttons .btn {
+            width: 75px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            border-left: 1px solid #eee;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+        
+        .btn-esc {
+            color: #10283a9a;
+        }
+        
+        .btn-backspace {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <header>
+
+            <!-- Main webpage top navigation bar -->
+            <div class="main-nav">
+                <div class="nav-left">
+                    <a href="../index.html">
+                        <img src="../images/Photo.jpg" alt="personalPhoto">
+                    </a>
+                </div>
+                <div class="nav-right">
+
+                    <!-- Study Notes drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Study Notes</a>
+                        <ul id="studyNotes" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="../pages/note1.html">Web standards and front-end development</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note2.html">Front end design mode</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note3.html">How to Write JS Code Well</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/note4.html">Front end and HTML</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- JavaScript Tools drop-down menu -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">JavaScript Tools</a>
+                        <ul id="JSTools" class="dropdown-menu">
+                            <li>
+                                <a class="link" href="../pages/Calculator.html">Calculator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/Random Number Generator.html">Random Number Generator</a>
+                            </li>
+                            <li>
+                                <a class="link" href="../pages/Dirty language blocking device.html">Dirty language blocking device</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <div class="dropdown">
+                        <a class="dropdown-link link" href="#">Personal Projects</a>
+                        <ul id="personalProjects" class="dropdown-menu">
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                            </li>
+                            <li>
+                                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personal Projects -->
+                    <a class="link" href="#">Go to Footer</a>
+
+                    <!-- Change Page Color Style Button -->
+                    <button type="button" id="modeBtn">🌙</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="page">
+        <div class="calculator">
+            <header class="cal-header">Simple Calculator</header>
+            <main class="cal-main">
+                <div class="origin-value">0</div>
+                <div class="cal-keyboard">
+                    <ul class="cal-items">
+                        <li data-action="num">7</li>
+                        <li data-action="num">8</li>
+                        <li data-action="num">9</li>
+                        <li data-action="operator">÷</li>
+                        <li data-action="num">4</li>
+                        <li data-action="num">5</li>
+                        <li data-action="num">6</li>
+                        <li data-action="operator">x</li>
+                        <li data-action="num">1</li>
+                        <li data-action="num">2</li>
+                        <li data-action="num">3</li>
+                        <li data-action="operator">-</li>
+                        <li data-action="num">0</li>
+                        <li data-action="operator">Clear</li>
+                        <li data-action="operator">=</li>
+                        <li data-action="operator">+</li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <div id="titleWord"></div>
+        <div class="introduce-title"></div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            <div id="footer-notes">
+                <div class="footer-title">Study Notes</div>
+                <a href="../pages/note1.html">Front end design mode</a>
+                <a href="../pages/note2.html">How to Write JS Code Well</a>
+                <a href="../pages/note3.html">Front end and HTML</a>
+                <a href="../pages/note4.html">Web standards and front-end development</a>
+            </div>
+            <div id="footer-tools">
+                <div class="footer-title">JavaScript Tools</div>
+                <a href="../pages/Calculator.html">Calculator</a>
+                <a href="../pages/Random Number Generator.html">Random Number Generator</a>
+                <a href="../pages/Dirty language blocking device.html">Dirty language blocking device</a>
+            </div>
+            <div id="footer-projects">
+                <div class="footer-title">Personal Projects</div>
+                <a class="linkBtn" href="#personalWork">Copying Baidu.com</a>
+                <a class="linkBtn" href="#personalWork">Normal website homepage</a>
+                <a class="linkBtn" href="#personalWork">Personal blog homepage (Responsive)</a>
+            </div>
+            <div id="copyright">Copyright © 2023 CuinnFan</div>
+        </footer>
+    </div>
+</body>
+<script src="../js/calculator.js"></script>
+<script src="../js/global.js"></script>
+
+</html>
